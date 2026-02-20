@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta -->
+  <title>MM Painting & Design | Premium Painting in Danbury, CT</title>
+  <meta name="description" content="MM Painting & Design delivers premium residential and commercial painting in Danbury, CT and surrounding areas. Detail-oriented finish. Free estimates. Call today." />
+  <meta name="keywords" content="painting contractor Danbury CT, house painter Danbury, commercial painting Connecticut, interior painting Bethel CT, exterior painting Ridgefield" />
+  <link rel="canonical" href="https://www.mmpaintingdesign.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MM Painting & Design | Where Detail Matters" />
+  <meta property="og:description" content="Premium residential & commercial painting in Danbury, CT. Detail-oriented. Reliable. Free estimates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mmpaintingdesign.com/" />
+  <meta property="og:image" content="https://www.mmpaintingdesign.com/og-image.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MM Painting & Design",
+    "description": "Premium residential and commercial painting services in Danbury, CT and surrounding areas.",
+    "url": "https://www.mmpaintingdesign.com",
+    "telephone": "+12035550199",
+    "email": "estimates@mmpaintingdesign.com",
+    "image": "https://www.mmpaintingdesign.com/logo-dark.png",
+    "slogan": "Where Detail Matters",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Danbury",
+      "addressRegion": "CT",
+      "postalCode": "06810",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.3948,
+      "longitude": -73.4540
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Danbury"},
+      {"@type": "City", "name": "Bethel"},
+      {"@type": "City", "name": "Brookfield"},
+      {"@type": "City", "name": "Ridgefield"},
+      {"@type": "City", "name": "New Milford"}
+    ],
+    "serviceType": ["Interior Painting", "Exterior Painting", "Residential Painting", "Commercial Painting"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NOTIFICATION BAR ===== -->
+  <div class="notif-bar" id="notifBar" role="status" aria-live="polite">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#D12B2B" stroke-width="2"/><path d="M12 8v4l3 3" stroke="#D12B2B" stroke-width="2" stroke-linecap="round"/></svg>
+      Now booking: next 2–3 weeks — <strong>Slots filling fast.</strong> Call or text for your free estimate.
+    </span>
+    <button class="notif-close" aria-label="Close notification" onclick="this.closest('.notif-bar').remove()">×</button>
+  </div>
+
+  <!-- ===== STICKY HEADER ===== -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container header-inner">
+
+      <!-- LOGO: Replace src with actual logo file path -->
+      <a href="#hero" class="logo-link" aria-label="MM Painting & Design - Home">
+        <img
+          src="logo-dark.png"
+          alt="MM Painting & Design logo"
+          class="logo-img"
+          width="160"
+          height="56"
+          loading="eager"
+        />
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Free Estimate</a>
+      </nav>
+
+      <!-- HAMBURGER BUTTON -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#work" class="mobile-nav-link">Work</a></li>
+        <li><a href="#reviews" class="mobile-nav-link">Reviews</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="tel:+12035550199" class="btn btn-primary btn-full">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.22 2.38 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Call Now
+        </a>
+        <a href="sms:+12035550199" class="btn btn-outline btn-full">Text Us</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero" aria-labelledby="heroHeading">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-geo hero-geo-1"></div>
+        <div class="hero-geo hero-geo-2"></div>
+        <div class="hero-geo hero-geo-3"></div>
+        <div class="hero-accent-line"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-text">Danbury, CT &amp; Surrounding Areas</span>
+        </div>
+        <h1 class="hero-headline" id="heroHeading">
+          Premium Painting &amp; Design<br />
+          <em class="hero-headline-em">in Danbury, CT</em>
+        </h1>
+        <p class="hero-sub">
+          Meticulous prep. Flawless finishes. Done right the first time.<br />
+          Residential and commercial painting you can trust.
+        </p>
+        <p class="hero-tagline">— Where Detail Matters —</p>
+
+        <div class="hero-ctas">
+          <a href="tel:+12035550199" class="btn btn-primary btn-lg" aria-label="Call MM Painting & Design">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.22 2.38 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Call Now
+          </a>
+          <a href="sms:+12035550199" class="btn btn-outline-light btn-lg" aria-label="Text MM Painting & Design">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Text Us
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges" role="list">
+          <div class="trust-badge" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="#D12B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Residential &amp; Commercial
+          </div>
+          <div class="trust-badge" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#D12B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Detail-Oriented Finish
+          </div>
+          <div class="trust-badge" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#D12B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 12 11 14 15 10" stroke="#D12B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Free Estimates
+          </div>
+          <div class="trust-badge" role="listitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#D12B2B" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="#D12B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            On-Time &amp; Clean
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="section services-section" id="services" aria-labelledby="servicesHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">What We Do</span>
+          <h2 class="section-title" id="servicesHeading">Professional Painting Services</h2>
+          <p class="section-sub">From prep to final coat — every surface treated with precision.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-title">Interior Painting</h3>
+            <p class="service-desc">Clean lines, smooth walls, perfect trim. We protect your furniture and floors and leave your space better than we found it.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="service-title">Exterior Painting</h3>
+            <p class="service-desc">Proper surface prep, crack repair, and premium coatings built to withstand Connecticut's weather. Curb appeal that lasts.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="service-title">Residential</h3>
+            <p class="service-desc">Your home deserves the best. We treat every room with care — whether a full repaint or a single accent wall refresh.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" stroke="currentColor" stroke-width="2"/><line x1="12" y1="12" x2="12" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10" y1="14" x2="14" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="service-title">Commercial</h3>
+            <p class="service-desc">Offices, retail, multi-family — we work around your schedule to minimize disruption and deliver a professional result on deadline.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US SECTION ===== -->
+    <section class="section why-section" id="why" aria-labelledby="whyHeading">
+      <div class="container">
+        <div class="why-inner">
+          <div class="why-text-col">
+            <span class="section-eyebrow light">Why MM Painting</span>
+            <h2 class="section-title light" id="whyHeading">Built on Standards.<br />Backed by Results.</h2>
+            <p class="section-sub light">We're not the cheapest — we're the best value for homeowners and businesses who expect it done right.</p>
+            <a href="#contact" class="btn btn-primary btn-lg why-cta">Get Your Free Estimate</a>
+          </div>
+
+          <div class="why-list-col">
+            <ul class="why-list" role="list">
+              <li class="why-item">
+                <span class="why-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="9 12 11 14 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div>
+                  <strong>Clean, Detailed Finish</strong>
+                  <p>Crisp edges. Smooth coats. Zero drips. Every time.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <span class="why-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z" stroke="currentColor" stroke-width="2"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5zM3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14zM14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5zM10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z" stroke="currentColor" stroke-width="1.5"/></svg>
+                </span>
+                <div>
+                  <strong>Careful Prep &amp; Protection</strong>
+                  <p>We mask, cover, and protect everything before a drop of paint opens.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <span class="why-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/></svg>
+                </span>
+                <div>
+                  <strong>Reliable Scheduling</strong>
+                  <p>We show up when we say we will. Your time matters.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <span class="why-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div>
+                  <strong>Professional Communication</strong>
+                  <p>Clear quotes. Honest timelines. No surprise charges.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <span class="why-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div>
+                  <strong>Quality Materials</strong>
+                  <p>We use Benjamin Moore, Sherwin-Williams, and other top-grade coatings.</p>
+                </div>
+              </li>
+              <li class="why-item">
+                <span class="why-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div>
+                  <strong>Respect for Your Space</strong>
+                  <p>We treat your home or business like our own. Clean jobsite, every day.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORK / GALLERY SECTION ===== -->
+    <!-- DEVELOPER NOTE: Replace the .gallery-placeholder divs with <img> tags pointing to your before/after photos -->
+    <section class="section gallery-section" id="work" aria-labelledby="galleryHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Our Work</span>
+          <h2 class="section-title" id="galleryHeading">Finished Projects</h2>
+          <p class="section-sub">Every project reflects our commitment to a flawless result.</p>
+        </div>
+
+        <div class="gallery-grid" role="list">
+
+          <figure class="gallery-item" role="listitem">
+            <!-- Replace with: <img src="your-photo.jpg" alt="Interior refresh - living room" loading="lazy"> -->
+            <div class="gallery-placeholder" aria-label="Photo placeholder - Interior refresh" role="img">
+              <span class="placeholder-label">Interior Refresh</span>
+            </div>
+            <figcaption>Interior Refresh — Danbury, CT</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-label="Photo placeholder - Exterior repaint" role="img">
+              <span class="placeholder-label">Exterior Repaint</span>
+            </div>
+            <figcaption>Exterior Repaint — Bethel, CT</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-label="Photo placeholder - Commercial office" role="img">
+              <span class="placeholder-label">Commercial Office</span>
+            </div>
+            <figcaption>Commercial Office — Danbury, CT</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-label="Photo placeholder - Kitchen cabinets" role="img">
+              <span class="placeholder-label">Kitchen Cabinets</span>
+            </div>
+            <figcaption>Cabinet Refinish — Ridgefield, CT</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-label="Photo placeholder - Full home exterior" role="img">
+              <span class="placeholder-label">Full Home Exterior</span>
+            </div>
+            <figcaption>Full Exterior — Brookfield, CT</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-label="Photo placeholder - Accent wall" role="img">
+              <span class="placeholder-label">Accent Wall</span>
+            </div>
+            <figcaption>Accent Wall — New Milford, CT</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS SECTION ===== -->
+    <section class="section reviews-section" id="reviews" aria-labelledby="reviewsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Customer Reviews</span>
+          <h2 class="section-title" id="reviewsHeading">What Our Clients Say</h2>
+        </div>
+
+        <div class="reviews-grid">
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <blockquote class="review-text">"MM Painting transformed our living room and kitchen. Spotless work — they protected everything, left no mess, and the finish is absolutely perfect. Highly recommend."</blockquote>
+            <div class="review-author">
+              <div class="review-avatar" aria-hidden="true">JL</div>
+              <div>
+                <strong>Jennifer L.</strong>
+                <span>Danbury, CT</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <blockquote class="review-text">"We hired MM for our office repaint. They worked over a weekend so we weren't disrupted. Professional, clean, on budget. The walls look brand new. Will use again."</blockquote>
+            <div class="review-author">
+              <div class="review-avatar" aria-hidden="true">RT</div>
+              <div>
+                <strong>Robert T.</strong>
+                <span>Brookfield, CT</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#D12B2B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <blockquote class="review-text">"The exterior of our house looks incredible. They took their time on the prep, filled in every crack, and the color came out exactly as we envisioned. Worth every penny."</blockquote>
+            <div class="review-author">
+              <div class="review-avatar" aria-hidden="true">SM</div>
+              <div>
+                <strong>Sandra M.</strong>
+                <span>Ridgefield, CT</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="reviews-cta">
+          <a href="https://g.page/r/YOUR-GOOGLE-PLACE-ID" target="_blank" rel="noopener noreferrer" class="btn btn-outline google-btn" aria-label="See MM Painting & Design on Google Reviews">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            See Us on Google
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about-section" id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-visual" aria-hidden="true">
+            <!-- Replace with team photo or project photo -->
+            <div class="about-img-placeholder">
+              <img src="logo-icon.png" alt="MM Painting & Design mark" class="about-logo-mark" loading="lazy" />
+            </div>
+            <div class="about-stat-bar">
+              <div class="about-stat">
+                <strong>500+</strong>
+                <span>Jobs Completed</span>
+              </div>
+              <div class="about-stat">
+                <strong>10+</strong>
+                <span>Years Experience</span>
+              </div>
+              <div class="about-stat">
+                <strong>5★</strong>
+                <span>Google Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <span class="section-eyebrow">About Us</span>
+            <h2 class="section-title" id="aboutHeading">Danbury's Premium Painting Crew</h2>
+            <p>MM Painting &amp; Design was built on a simple idea: paint applied with care looks completely different. We sweat every detail — the prep, the edges, the final walkthrough — because we know that's what separates a good job from a great one.</p>
+            <p>We serve homeowners and businesses across <strong>Danbury, Bethel, Brookfield, Ridgefield, and New Milford, CT</strong>. No subcontractors. No shortcuts. Every project gets our full attention.</p>
+            <p>When you hire MM, you get a team that communicates clearly, respects your property, and delivers a finish that holds up. That's our standard. Every time.</p>
+            <div class="service-area-tags" aria-label="Service areas">
+              <span class="area-tag">Danbury</span>
+              <span class="area-tag">Bethel</span>
+              <span class="area-tag">Brookfield</span>
+              <span class="area-tag">Ridgefield</span>
+              <span class="area-tag">New Milford</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="section faq-section" id="faq" aria-labelledby="faqHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Common Questions</span>
+          <h2 class="section-title" id="faqHeading">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list" role="list">
+
+          <details class="faq-item" role="listitem">
+            <summary class="faq-question">Do you offer free estimates?</summary>
+            <div class="faq-answer">
+              <p>Yes. All estimates are 100% free, no obligation. We'll assess the job in person and provide a clear, written quote. Call or text us anytime to schedule.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" role="listitem">
+            <summary class="faq-question">How long does a typical job take?</summary>
+            <div class="faq-answer">
+              <p>It depends on scope. An average interior room takes 1–2 days. Full interiors or exterior repaints typically run 3–7 days. We give you a firm timeline during your estimate.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" role="listitem">
+            <summary class="faq-question">What areas do you serve?</summary>
+            <div class="faq-answer">
+              <p>We primarily serve Danbury, Bethel, Brookfield, Ridgefield, and New Milford, CT. Contact us if you're in a neighboring town — we may be able to accommodate.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" role="listitem">
+            <summary class="faq-question">What paint brands do you use?</summary>
+            <div class="faq-answer">
+              <p>We work with premium brands including Benjamin Moore and Sherwin-Williams. We recommend specific product lines based on your surface type and desired finish. You can also supply your own paint if preferred.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" role="listitem">
+            <summary class="faq-question">How do you protect furniture and floors?</summary>
+            <div class="faq-answer">
+              <p>We move or cover all furniture, lay protective drop cloths on all flooring, and tape all edges meticulously before any paint is opened. We clean up fully each day and at project completion.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" role="listitem">
+            <summary class="faq-question">Are you insured?</summary>
+            <div class="faq-answer">
+              <p>Yes. MM Painting &amp; Design is fully insured. We carry both general liability and workers' compensation coverage. Proof of insurance available upon request.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact-section" id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow light">Get Started</span>
+          <h2 class="section-title light" id="contactHeading">Request a Free Estimate</h2>
+          <p class="section-sub light">No pressure. Just a straight answer and a fair price.</p>
+        </div>
+
+        <div class="contact-inner">
+
+          <div class="contact-actions">
+            <a href="tel:+12035550199" class="btn btn-primary btn-xl" aria-label="Call MM Painting & Design at 203-555-0199">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.22 2.38 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Call (203) 555-0199
+            </a>
+            <a href="sms:+12035550199" class="btn btn-outline-light btn-xl" aria-label="Text MM Painting & Design">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Text Us
+            </a>
+
+            <div class="contact-info-block">
+              <div class="contact-info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                <span>Service Area: Danbury, CT &amp; Nearby</span>
+              </div>
+              <div class="contact-info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Mon–Fri 8am–6pm &nbsp;|&nbsp; Sat 8am–2pm</span>
+              </div>
+              <div class="contact-info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+                <a href="mailto:estimates@mmpaintingdesign.com" class="contact-email">estimates@mmpaintingdesign.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm" novalidate aria-label="Free estimate request form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" aria-required="true" />
+                <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="(203) 000-0000" required autocomplete="tel" aria-required="true" />
+                <span class="form-error" id="phoneError" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+              <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your project <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="4" placeholder="Interior painting, exterior, room count, any details..." required aria-required="true"></textarea>
+              <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full btn-xl form-submit">
+              Send My Request
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="12 5 19 12 12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form-note">We respond within 1 business day. No spam, ever.</p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <!-- Replace with real logo if different variant needed for footer -->
+        <img src="logo-dark.png" alt="MM Painting & Design" class="footer-logo" width="140" height="50" loading="lazy" />
+        <p class="footer-tagline">— Where Detail Matters —</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h3 class="footer-nav-title">Quick Links</h3>
+        <ul class="footer-nav-list" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3 class="footer-nav-title">Contact</h3>
+        <p><a href="tel:+12035550199">(203) 555-0199</a></p>
+        <p><a href="mailto:estimates@mmpaintingdesign.com">estimates@mmpaintingdesign.com</a></p>
+        <p>Danbury, CT 06810</p>
+        <p class="footer-hours">Mon–Fri 8am–6pm &bull; Sat 8am–2pm</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>📍 Serving Danbury, Bethel, Brookfield, Ridgefield &amp; New Milford, CT</p>
+        <p>&copy; <span id="year"></span> MM Painting &amp; Design. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top of page" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- ===== FLOATING MOBILE CALL BUTTON ===== -->
+  <a href="tel:+12035550199" class="mobile-float-call" aria-label="Call MM Painting & Design">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.22 2.38 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Call Now</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
