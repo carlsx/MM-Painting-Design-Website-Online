@@ -1,6 +1,6 @@
 /**
- * MM Painting & Design — script.js  v2
- * Lang switcher + i18n (EN / PT / ES) + nav + form + scroll
+ * MM Painting & Design — script.js  v3
+ * Lang switcher + i18n (EN / PT / ES) + nav + Formspree form + scroll
  */
 
 (function () {
@@ -68,8 +68,15 @@
       gal_eyebrow:   'Our Work',
       gal_title:     'Finished Projects',
       gal_sub:       'Every project reflects our commitment to a flawless result.',
-      gal1: 'Interior Refresh', gal2: 'Exterior Repaint', gal3: 'Commercial Office',
-      gal4: 'Cabinet Refinish', gal5: 'Full Home Exterior', gal6: 'Accent Wall',
+      ba_eyebrow:    'The MM Difference',
+      ba_title:      'Before & After',
+      ba_sub:        'See what a detail-oriented finish actually looks like.',
+      ba_before:     'Before',
+      ba_after:      'After',
+      ba1_caption:   'Exterior Repaint — Danbury, CT',
+      ba2_caption:   'Interior Refresh — Bethel, CT',
+      ba3_caption:   'Power Washing — Ridgefield, CT',
+      ba_cta:        'Get a Free Estimate',
       rev_eyebrow:   'Customer Reviews',
       rev_title:     'What Our Clients Say',
       rev1_text:     '"MM Painting transformed our living room and kitchen. Spotless work — they protected everything, left no mess, and the finish is absolutely perfect. Highly recommend."',
@@ -101,6 +108,7 @@
       contact_sub:     'No pressure. Just a straight answer and a fair price.',
       contact_area:    'Service Area: Danbury, CT & Nearby',
       contact_hours:   'Mon–Fri 8am–6pm | Sat 8am–2pm',
+      contact_google:  'Read Our Google Reviews',
       form_name:       'Full Name',
       form_phone:      'Phone Number',
       form_email:      'Email Address',
@@ -114,7 +122,8 @@
       form_err_phone:  'Please enter a valid phone number.',
       form_err_email:  'Please enter a valid email address.',
       form_err_msg:    'Please describe your project (at least 10 characters).',
-      form_success:    "✓ Request Sent! We'll be in touch.",
+      form_success:    "✓ Request Sent! We'll be in touch within 1 business day.",
+      form_error_net:  '⚠ Could not send. Please call or text us directly.',
     },
 
     pt: {
@@ -172,8 +181,15 @@
       gal_eyebrow:   'Nossos Trabalhos',
       gal_title:     'Projetos Concluídos',
       gal_sub:       'Cada projeto reflete nosso compromisso com um resultado impecável.',
-      gal1: 'Renovação Interna', gal2: 'Repintura Externa', gal3: 'Escritório Comercial',
-      gal4: 'Repintura de Armários', gal5: 'Exterior Completo', gal6: 'Parede de Destaque',
+      ba_eyebrow:    'A Diferença MM',
+      ba_title:      'Antes & Depois',
+      ba_sub:        'Veja como um acabamento detalhado realmente transforma.',
+      ba_before:     'Antes',
+      ba_after:      'Depois',
+      ba1_caption:   'Repintura Externa — Danbury, CT',
+      ba2_caption:   'Renovação Interna — Bethel, CT',
+      ba3_caption:   'Lavagem a Pressão — Ridgefield, CT',
+      ba_cta:        'Solicitar Orçamento Grátis',
       rev_eyebrow:   'Avaliações de Clientes',
       rev_title:     'O Que Nossos Clientes Dizem',
       rev1_text:     '"A MM Painting transformou nossa sala e cozinha. Trabalho impecável — protegeram tudo, não deixaram sujeira, e o acabamento está absolutamente perfeito. Super recomendo."',
@@ -205,6 +221,7 @@
       contact_sub:     'Sem pressão. Apenas uma resposta direta e um preço justo.',
       contact_area:    'Área de Atendimento: Danbury, CT & Arredores',
       contact_hours:   'Seg–Sex 8h–18h | Sáb 8h–14h',
+      contact_google:  'Ler Nossas Avaliações no Google',
       form_name:       'Nome Completo',
       form_phone:      'Telefone',
       form_email:      'E-mail',
@@ -218,7 +235,8 @@
       form_err_phone:  'Por favor, insira um telefone válido.',
       form_err_email:  'Por favor, insira um e-mail válido.',
       form_err_msg:    'Descreva seu projeto (mínimo 10 caracteres).',
-      form_success:    '✓ Solicitação enviada! Entraremos em contato.',
+      form_success:    '✓ Solicitação enviada! Entraremos em contato em até 1 dia útil.',
+      form_error_net:  '⚠ Não foi possível enviar. Ligue ou envie mensagem diretamente.',
     },
 
     es: {
@@ -276,8 +294,15 @@
       gal_eyebrow:   'Nuestros Trabajos',
       gal_title:     'Proyectos Terminados',
       gal_sub:       'Cada proyecto refleja nuestro compromiso con un resultado impecable.',
-      gal1: 'Renovación Interior', gal2: 'Repintura Exterior', gal3: 'Oficina Comercial',
-      gal4: 'Refinado de Gabinetes', gal5: 'Exterior Completo', gal6: 'Pared de Acento',
+      ba_eyebrow:    'La Diferencia MM',
+      ba_title:      'Antes & Después',
+      ba_sub:        'Vea cómo un acabado detallado transforma cualquier espacio.',
+      ba_before:     'Antes',
+      ba_after:      'Después',
+      ba1_caption:   'Repintura Exterior — Danbury, CT',
+      ba2_caption:   'Renovación Interior — Bethel, CT',
+      ba3_caption:   'Lavado a Presión — Ridgefield, CT',
+      ba_cta:        'Solicitar Presupuesto Gratis',
       rev_eyebrow:   'Reseñas de Clientes',
       rev_title:     'Lo Que Dicen Nuestros Clientes',
       rev1_text:     '"MM Painting transformó nuestra sala y cocina. Trabajo impecable — protegieron todo, no dejaron desorden, y el acabado es absolutamente perfecto. Muy recomendable."',
@@ -287,55 +312,59 @@
       about_eyebrow: 'Sobre Nosotros',
       about_title:   'El Equipo Premium de Pintura de Danbury',
       about_p1:      'MM Painting & Design fue fundada con una idea simple: la pintura aplicada con cuidado luce completamente diferente. Nos esforzamos en cada detalle — la preparación, los bordes, la inspección final.',
-      about_p2:      'Servimos a hogares y empresas en <strong>Danbury, Bethel, Brookfield, Ridgefield y New Milford, CT</strong>. Sin subcontratistas. Sin atajos. Atención total en cada proyecto.',
+      about_p2:      'Atendemos hogares y empresas en <strong>Danbury, Bethel, Brookfield, Ridgefield y New Milford, CT</strong>. Sin subcontratistas. Sin atajos. Atención completa en cada proyecto.',
       about_p3:      'Cuando contrata a MM, obtiene un equipo que se comunica claramente, respeta su propiedad y entrega un acabado duradero. Ese es nuestro estándar. Siempre.',
       stat1: 'Trabajos Completados', stat2: 'Años de Experiencia', stat3: 'Calificación Google',
       faq_eyebrow:   'Preguntas Frecuentes',
       faq_title:     'Preguntas Comunes',
       faq1_q:        '¿Ofrecen presupuestos gratuitos?',
-      faq1_a:        'Sí. Todos los presupuestos son 100% gratuitos, sin compromiso. Evaluamos el trabajo en persona y entregamos una cotización clara y por escrito.',
-      faq2_q:        '¿Cuánto tiempo toma un trabajo típico?',
-      faq2_a:        'Depende del alcance. Una habitación interior promedio toma 1–2 días. Interiores completos o repinturas exteriores generalmente toman 3–7 días.',
+      faq1_a:        'Sí. Todos los presupuestos son 100% gratuitos, sin compromiso. Evaluamos el trabajo en persona y proporcionamos una cotización clara y por escrito.',
+      faq2_q:        '¿Cuánto dura un trabajo típico?',
+      faq2_a:        'Depende del alcance. Una habitación interior promedio toma 1–2 días. Interiores completos o repinturas exteriores suelen tomar 3–7 días.',
       faq3_q:        '¿Qué áreas atienden?',
-      faq3_a:        'Atendemos principalmente Danbury, Bethel, Brookfield, Ridgefield y New Milford, CT. Contáctenos si está en una ciudad vecina — podemos acomodarlo.',
+      faq3_a:        'Atendemos principalmente Danbury, Bethel, Brookfield, Ridgefield y New Milford, CT. Contáctenos si está en una ciudad cercana — podemos acomodarle.',
       faq4_q:        '¿Qué marcas de pintura usan?',
       faq4_a:        'Trabajamos con marcas premium como Benjamin Moore y Sherwin-Williams. Recomendamos líneas específicas según el tipo de superficie y acabado deseado.',
       faq5_q:        '¿Cómo protegen muebles y pisos?',
-      faq5_a:        'Movemos o cubrimos todos los muebles, colocamos lonas protectoras en todos los pisos y cinta en todos los bordes antes de abrir cualquier lata de pintura.',
+      faq5_a:        'Movemos o cubrimos todos los muebles, colocamos lonas protectoras en todos los pisos y cintamos todos los bordes meticulosamente antes de abrir cualquier lata de pintura.',
       faq6_q:        '¿Están asegurados?',
-      faq6_a:        'Sí. MM Painting & Design está totalmente asegurada. Contamos con responsabilidad civil y compensación laboral. Comprobante disponible a pedido.',
-      contact_eyebrow: 'Comience Ahora',
+      faq6_a:        'Sí. MM Painting & Design está completamente asegurada. Contamos con responsabilidad civil y compensación laboral. Comprobante disponible bajo solicitud.',
+      contact_eyebrow: 'Comenzar',
       contact_title:   'Solicite un Presupuesto Gratuito',
       contact_sub:     'Sin presión. Solo una respuesta directa y un precio justo.',
       contact_area:    'Área de Servicio: Danbury, CT y Alrededores',
       contact_hours:   'Lun–Vie 8am–6pm | Sáb 8am–2pm',
+      contact_google:  'Leer Nuestras Reseñas en Google',
       form_name:       'Nombre Completo',
-      form_phone:      'Teléfono',
+      form_phone:      'Número de Teléfono',
       form_email:      'Correo Electrónico',
       form_msg:        'Cuéntenos sobre su proyecto',
-      form_submit:     'Enviar Solicitud',
+      form_submit:     'Enviar Mi Solicitud',
       form_note:       'Respondemos en 1 día hábil. Sin spam.',
-      footer_links:    'Accesos Rápidos',
+      footer_links:    'Enlaces Rápidos',
       footer_contact_title: 'Contacto',
       footer_copy:     'Todos los derechos reservados.',
-      form_err_name:   'Por favor, ingrese su nombre completo.',
-      form_err_phone:  'Por favor, ingrese un teléfono válido.',
-      form_err_email:  'Por favor, ingrese un correo válido.',
+      form_err_name:   'Por favor ingrese su nombre completo.',
+      form_err_phone:  'Por favor ingrese un número de teléfono válido.',
+      form_err_email:  'Por favor ingrese un correo electrónico válido.',
       form_err_msg:    'Describa su proyecto (mínimo 10 caracteres).',
-      form_success:    '✓ ¡Solicitud enviada! Nos pondremos en contacto.',
+      form_success:    '✓ ¡Solicitud enviada! Nos pondremos en contacto en 1 día hábil.',
+      form_error_net:  '⚠ No se pudo enviar. Por favor llámenos o escríbanos directamente.',
     }
+
   };
 
   /* ════════════════════════════════════════════════════
-     LANGUAGE STATE
+     LANGUAGE METADATA
   ════════════════════════════════════════════════════ */
-  var LANG_LABELS = { en: 'EN', pt: 'PT', es: 'ES' };
   var LANG_CODES  = { en: 'en', pt: 'pt-BR', es: 'es' };
+  var LANG_LABELS = { en: 'EN', pt: 'PT',    es: 'ES' };
 
   function getInitialLang() {
-    // 1. URL param: ?lang=pt
-    var param = new URLSearchParams(window.location.search).get('lang');
-    if (param && I18N[param]) return param;
+    // 1. URL param
+    var params = new URLSearchParams(window.location.search);
+    var p = params.get('lang');
+    if (p && I18N[p]) return p;
     // 2. localStorage
     var saved = localStorage.getItem('mm_lang');
     if (saved && I18N[saved]) return saved;
@@ -371,7 +400,7 @@
       name:    { en: 'Your name',             pt: 'Seu nome',             es: 'Su nombre' },
       phone:   { en: '(203) 000-0000',        pt: '(203) 000-0000',       es: '(203) 000-0000' },
       email:   { en: 'your@email.com',        pt: 'seu@email.com',        es: 'su@correo.com' },
-      message: { en: 'Interior painting, exterior, room count, any details...', pt: 'Pintura interna, externa, quantidade de cômodos...', es: 'Pintura interior, exterior, número de habitaciones...' }
+      message: { en: 'Interior painting, exterior, power washing, room count, any details...', pt: 'Pintura interna, externa, lavagem, quantidade de cômodos...', es: 'Pintura interior, exterior, lavado, número de habitaciones...' }
     };
     Object.keys(placeholders).forEach(function (id) {
       var el = document.getElementById(id);
@@ -452,12 +481,12 @@
   /* ════════════════════════════════════════════════════
      DOM READY INIT
   ════════════════════════════════════════════════════ */
-  var header     = document.getElementById('siteHeader');
-  var hamburger  = document.getElementById('hamburger');
-  var mobileNav  = document.getElementById('mobileNavOverlay');
-  var backToTop  = document.getElementById('backToTop');
+  var header      = document.getElementById('siteHeader');
+  var hamburger   = document.getElementById('hamburger');
+  var mobileNav   = document.getElementById('mobileNavOverlay');
+  var backToTop   = document.getElementById('backToTop');
   var contactForm = document.getElementById('contactForm');
-  var yearEl     = document.getElementById('year');
+  var yearEl      = document.getElementById('year');
   var mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
   // Year
@@ -532,7 +561,7 @@
     });
   });
 
-  /* ── CONTACT FORM VALIDATION ── */
+  /* ── CONTACT FORM — FORMSPREE + CLIENT VALIDATION ── */
   if (contactForm) {
 
     function showErr(inputId, errId, key) {
@@ -555,45 +584,99 @@
 
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      var nameEl    = document.getElementById('name');
+      var phoneEl   = document.getElementById('phone');
+      var emailEl   = document.getElementById('email');
+      var messageEl = document.getElementById('message');
       var valid = true;
-      var name    = document.getElementById('name');
-      var phone   = document.getElementById('phone');
-      var email   = document.getElementById('email');
-      var message = document.getElementById('message');
 
       ['name','phone','email','message'].forEach(function (id) { clearErr(id, id + 'Error'); });
 
-      if (!name || name.value.trim().length < 2)   { showErr('name', 'nameError', 'form_err_name'); valid = false; }
-      if (!phone || phone.value.trim().length < 7)  { showErr('phone','phoneError','form_err_phone'); valid = false; }
-      if (email && email.value.trim()) {
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { showErr('email','emailError','form_err_email'); valid = false; }
+      if (!nameEl || nameEl.value.trim().length < 2)    { showErr('name',    'nameError',    'form_err_name');  valid = false; }
+      if (!phoneEl || phoneEl.value.trim().length < 7)   { showErr('phone',   'phoneError',   'form_err_phone'); valid = false; }
+      if (emailEl && emailEl.value.trim()) {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) { showErr('email', 'emailError', 'form_err_email'); valid = false; }
       }
-      if (!message || message.value.trim().length < 10) { showErr('message','messageError','form_err_msg'); valid = false; }
+      if (!messageEl || messageEl.value.trim().length < 10) { showErr('message', 'messageError', 'form_err_msg'); valid = false; }
 
-      if (!valid) { var first = contactForm.querySelector('.error'); if (first) first.focus(); return; }
+      if (!valid) {
+        var first = contactForm.querySelector('.error');
+        if (first) first.focus();
+        return;
+      }
 
-      var subject = encodeURIComponent('Free Estimate Request — MM Painting & Design');
-      var body = encodeURIComponent(
-        'Name: '  + name.value.trim()  + '\n' +
-        'Phone: ' + phone.value.trim() + '\n' +
-        'Email: ' + (email ? email.value.trim() : '') + '\n\n' +
-        'Project:\n' + message.value.trim()
-      );
-      window.location.href = 'mailto:marlonmurilhousa@hotmail.com?subject=' + subject + '&body=' + body;
-
+      // Show loading state
       var btn = contactForm.querySelector('.form-submit');
+      var origHTML = btn ? btn.innerHTML : '';
       if (btn) {
-        var orig = btn.innerHTML;
-        btn.innerHTML = I18N[currentLang]['form_success'] || '✓ Sent!';
+        btn.innerHTML = '<span>Sending…</span>';
         btn.disabled = true;
-        btn.style.cssText = 'background:#1a7a3a;border-color:#1a7a3a;';
-        setTimeout(function () {
-          btn.innerHTML = orig;
-          btn.disabled = false;
-          btn.style.cssText = '';
-          contactForm.reset();
-        }, 5000);
       }
+
+      // Submit to Formspree via fetch
+      var formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (response) {
+        if (response.ok) {
+          // Success
+          if (btn) {
+            btn.innerHTML = I18N[currentLang]['form_success'] || '✓ Sent!';
+            btn.style.cssText = 'background:#1a7a3a;border-color:#1a7a3a;';
+          }
+          contactForm.reset();
+          setTimeout(function () {
+            if (btn) {
+              btn.innerHTML = origHTML;
+              btn.disabled = false;
+              btn.style.cssText = '';
+            }
+          }, 6000);
+        } else {
+          // Formspree returned error — fallback to mailto
+          if (btn) {
+            btn.innerHTML = I18N[currentLang]['form_error_net'] || '⚠ Try again';
+            btn.style.cssText = 'background:#a81f1f;border-color:#a81f1f;';
+            btn.disabled = false;
+          }
+          setTimeout(function () {
+            if (btn) { btn.innerHTML = origHTML; btn.style.cssText = ''; }
+          }, 5000);
+          // Fallback mailto
+          var subject = encodeURIComponent('Free Estimate Request — MM Painting & Design');
+          var body = encodeURIComponent(
+            'Name: '    + (nameEl    ? nameEl.value.trim()    : '') + '\n' +
+            'Phone: '   + (phoneEl   ? phoneEl.value.trim()   : '') + '\n' +
+            'Email: '   + (emailEl   ? emailEl.value.trim()   : '') + '\n\n' +
+            'Project:\n'+ (messageEl ? messageEl.value.trim() : '')
+          );
+          window.open('mailto:marlonmurilhousa@hotmail.com?subject=' + subject + '&body=' + body);
+        }
+      })
+      .catch(function () {
+        // Network failure — fallback to mailto
+        if (btn) {
+          btn.innerHTML = I18N[currentLang]['form_error_net'] || '⚠ Try again';
+          btn.style.cssText = 'background:#a81f1f;border-color:#a81f1f;';
+          btn.disabled = false;
+        }
+        setTimeout(function () {
+          if (btn) { btn.innerHTML = origHTML; btn.style.cssText = ''; }
+        }, 5000);
+        var subject = encodeURIComponent('Free Estimate Request — MM Painting & Design');
+        var body = encodeURIComponent(
+          'Name: '    + (nameEl    ? nameEl.value.trim()    : '') + '\n' +
+          'Phone: '   + (phoneEl   ? phoneEl.value.trim()   : '') + '\n' +
+          'Email: '   + (emailEl   ? emailEl.value.trim()   : '') + '\n\n' +
+          'Project:\n'+ (messageEl ? messageEl.value.trim() : '')
+        );
+        window.open('mailto:marlonmurilhousa@hotmail.com?subject=' + subject + '&body=' + body);
+      });
     });
   }
 
@@ -607,7 +690,7 @@
     document.head.appendChild(styleEl);
 
     var targets = document.querySelectorAll(
-      '.service-card,.review-card,.why-item,.gallery-item,.faq-item,.about-stat'
+      '.service-card,.review-card,.why-item,.gallery-item,.faq-item,.about-stat,.ba-pair'
     );
     targets.forEach(function (el, i) {
       el.classList.add('reveal');
