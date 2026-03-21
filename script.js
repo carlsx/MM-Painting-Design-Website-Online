@@ -35,8 +35,8 @@
       badge_free:    'Free Estimates',
       badge_ontime:  'On-Time & Clean',
       svc_eyebrow:   'What We Do',
-      svc_title:     'Professional Painting Services',
-      svc_sub:       'From prep to final coat — every surface treated with precision.',
+      svc_title:     'Professional Painting & Property Services',
+      svc_sub:       'Painting, power washing, and window cleaning — every surface treated with precision.',
       svc1_title:    'Interior Painting',
       svc1_desc:     'Clean lines, smooth walls, perfect trim. We protect your furniture and floors and leave your space better than we found it.',
       svc2_title:    'Exterior Painting',
@@ -45,6 +45,10 @@
       svc3_desc:     'Your home deserves the best. We treat every room with care — whether a full repaint or a single accent wall refresh.',
       svc4_title:    'Commercial',
       svc4_desc:     'Offices, retail, multi-family — we work around your schedule to minimize disruption and deliver a professional result on deadline.',
+      svc5_title:    'Power Washing',
+      svc5_desc:     'Professional power washing for siding, driveways, decks, and exterior surfaces. Restore the clean look of your property safely and effectively.',
+      svc6_title:    'Window Cleaning',
+      svc6_desc:     'Professional residential and commercial window cleaning for a spotless, streak-free finish that improves appearance and natural light.',
       why_eyebrow:   'Why MM Painting',
       why_title:     'Built on Standards.<br>Backed by Results.',
       why_sub:       "We're not the cheapest — we're the best value for homeowners and businesses who expect it done right.",
@@ -135,8 +139,8 @@
       badge_free:    'Orçamentos Grátis',
       badge_ontime:  'Pontual & Limpo',
       svc_eyebrow:   'O Que Fazemos',
-      svc_title:     'Serviços Profissionais de Pintura',
-      svc_sub:       'Da preparação ao acabamento — cada superfície tratada com precisão.',
+      svc_title:     'Serviços Profissionais de Pintura e Propriedade',
+      svc_sub:       'Pintura, lavagem a pressão e limpeza de janelas — cada superfície tratada com precisão.',
       svc1_title:    'Pintura Interna',
       svc1_desc:     'Linhas limpas, paredes lisas, acabamento perfeito. Protegemos seus móveis e pisos e deixamos seu espaço melhor do que encontramos.',
       svc2_title:    'Pintura Externa',
@@ -145,6 +149,10 @@
       svc3_desc:     'Sua casa merece o melhor. Tratamos cada cômodo com cuidado — seja uma repintura completa ou apenas uma parede de destaque.',
       svc4_title:    'Comercial',
       svc4_desc:     'Escritórios, lojas, condomínios — trabalhamos conforme sua agenda para minimizar interrupções e entregar resultado profissional no prazo.',
+      svc5_title:    'Lavagem a Pressão',
+      svc5_desc:     'Lavagem a pressão profissional para revestimentos, calçadas, decks e superfícies externas. Restaure a aparência limpa do seu imóvel com segurança e eficiência.',
+      svc6_title:    'Limpeza de Janelas',
+      svc6_desc:     'Limpeza profissional de janelas residencial e comercial para um acabamento impecável e sem manchas que melhora a aparência e a entrada de luz natural.',
       why_eyebrow:   'Por que MM Painting',
       why_title:     'Construído em Padrões.<br>Garantido por Resultados.',
       why_sub:       'Não somos os mais baratos — somos o melhor custo-benefício para quem exige excelência.',
@@ -235,8 +243,8 @@
       badge_free:    'Presupuestos Gratis',
       badge_ontime:  'Puntual & Limpio',
       svc_eyebrow:   'Lo Que Hacemos',
-      svc_title:     'Servicios Profesionales de Pintura',
-      svc_sub:       'Desde la preparación hasta la capa final — cada superficie tratada con precisión.',
+      svc_title:     'Servicios Profesionales de Pintura y Propiedad',
+      svc_sub:       'Pintura, lavado a presión y limpieza de ventanas — cada superficie tratada con precisión.',
       svc1_title:    'Pintura Interior',
       svc1_desc:     'Líneas limpias, paredes lisas, acabado perfecto. Protegemos sus muebles y pisos y dejamos su espacio mejor de como lo encontramos.',
       svc2_title:    'Pintura Exterior',
@@ -245,6 +253,10 @@
       svc3_desc:     'Su hogar merece lo mejor. Tratamos cada habitación con cuidado — ya sea una repintura completa o un detalle de acento.',
       svc4_title:    'Comercial',
       svc4_desc:     'Oficinas, locales, edificios multifamiliares — trabajamos según su horario para minimizar interrupciones y entregar resultados profesionales a tiempo.',
+      svc5_title:    'Lavado a Presión',
+      svc5_desc:     'Lavado a presión profesional para revestimientos, entradas, terrazas y superficies exteriores. Restaure la apariencia limpia de su propiedad de forma segura y eficaz.',
+      svc6_title:    'Limpieza de Ventanas',
+      svc6_desc:     'Limpieza profesional de ventanas residencial y comercial para un acabado impecable y sin rayas que mejora la apariencia y la entrada de luz natural.',
       why_eyebrow:   'Por qué MM Painting',
       why_title:     'Construido en Estándares.<br>Respaldado por Resultados.',
       why_sub:       'No somos los más baratos — somos el mejor valor para quienes exigen que las cosas se hagan bien.',
@@ -567,7 +579,7 @@
         'Email: ' + (email ? email.value.trim() : '') + '\n\n' +
         'Project:\n' + message.value.trim()
       );
-      window.location.href = 'mailto:estimates@mmpaintingdesign.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:marlonmurilhousa@hotmail.com?subject=' + subject + '&body=' + body;
 
       var btn = contactForm.querySelector('.form-submit');
       if (btn) {

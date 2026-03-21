@@ -615,6 +615,14 @@ button { font-family: inherit; cursor: pointer; }
 }
 .gallery-item { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
 .gallery-item figcaption { padding: 0.6rem 0.75rem; font-size: 0.78rem; font-weight: 500; color: var(--gray-text); background: var(--gray-bg); }
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--t);
+}
+.gallery-item:hover .gallery-img { transform: scale(1.03); }
 .gallery-placeholder {
   aspect-ratio: 4/3;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, rgba(209,43,43,.25) 100%);
