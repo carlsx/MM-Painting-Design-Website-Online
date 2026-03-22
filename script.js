@@ -77,6 +77,11 @@
       ba2_caption:   'Interior Refresh — Bethel, CT',
       ba3_caption:   'Power Washing — Ridgefield, CT',
       ba_cta:        'Get a Free Estimate',
+      ba_gallery_open: 'View full gallery of this project',
+      ba_gallery_close: 'Close gallery',
+      ba_gallery_title: 'Full Gallery',
+      ba_detail: 'Detail',
+      ba_expand: 'Expand',
       rev_eyebrow:   'Customer Reviews',
       rev_title:     'What Our Clients Say',
       rev1_text:     '"MM Painting transformed our living room and kitchen. Spotless work — they protected everything, left no mess, and the finish is absolutely perfect. Highly recommend."',
@@ -190,6 +195,11 @@
       ba2_caption:   'Renovação Interna — Bethel, CT',
       ba3_caption:   'Lavagem a Pressão — Ridgefield, CT',
       ba_cta:        'Solicitar Orçamento Grátis',
+      ba_gallery_open: 'Ver galeria completa deste projeto',
+      ba_gallery_close: 'Fechar galeria',
+      ba_gallery_title: 'Galeria Completa',
+      ba_detail: 'Detalhe',
+      ba_expand: 'Ampliar',
       rev_eyebrow:   'Avaliações de Clientes',
       rev_title:     'O Que Nossos Clientes Dizem',
       rev1_text:     '"A MM Painting transformou nossa sala e cozinha. Trabalho impecável — protegeram tudo, não deixaram sujeira, e o acabamento está absolutamente perfeito. Super recomendo."',
@@ -303,6 +313,11 @@
       ba2_caption:   'Renovación Interior — Bethel, CT',
       ba3_caption:   'Lavado a Presión — Ridgefield, CT',
       ba_cta:        'Solicitar Presupuesto Gratis',
+      ba_gallery_open: 'Ver galería completa de este proyecto',
+      ba_gallery_close: 'Cerrar galería',
+      ba_gallery_title: 'Galería Completa',
+      ba_detail: 'Detalle',
+      ba_expand: 'Ampliar',
       rev_eyebrow:   'Reseñas de Clientes',
       rev_title:     'Lo Que Dicen Nuestros Clientes',
       rev1_text:     '"MM Painting transformó nuestra sala y cocina. Trabajo impecable — protegieron todo, no dejaron desorden, y el acabado es absolutamente perfecto. Muy recomendable."',
@@ -409,6 +424,7 @@
 
     // Update lang switcher UI
     updateLangUI(lang);
+    syncBeforeAfterLanguage();
   }
 
   function updateLangUI(lang) {
@@ -679,60 +695,112 @@
       });
     });
   }
-/* ── BEFORE & AFTER SLIDER + GALLERY ── */
-(function () {
-  var projects = [
-    {
-      label: 'Exterior', caption: 'Exterior Repaint — Danbury, CT',
-      pairs: [
-        { before: 'images/antes-depois-1.jpg',   after: 'images/antes-depois-1.1.jpg' },
-        { before: 'images/antes-depois-2.jpg',   after: 'images/antes-depois-2.1.jpg' },
-        { before: 'images/antes-depois-3.jpg',   after: 'images/antes-depois-3.1.jpg' }
-      ],
-      gallery: [
-        { src: 'images/antes-depois-1.jpg',   type: 'before' },
-        { src: 'images/antes-depois-1.1.jpg', type: 'after'  },
-        { src: 'images/antes-depois-2.jpg',   type: 'before' },
-        { src: 'images/antes-depois-2.1.jpg', type: 'after'  },
-        { src: 'images/antes-depois-3.jpg',   type: 'before' },
-        { src: 'images/antes-depois-3.1.jpg', type: 'after'  },
-        { src: 'images/detail-ext-1.jpg',     type: 'detail' },
-        { src: 'images/detail-ext-2.jpg',     type: 'detail' },
-        { src: 'images/detail-ext-3.jpg',     type: 'detail' }
-      ]
-    },
-    {
-      label: 'Interior', caption: 'Interior Refresh — Bethel, CT',
-      pairs: [
-        { before: 'images/antes-depois-4.jpg', after: 'images/antes-depois-4.1.jpg' },
-        { before: 'images/antes-depois-5.jpg', after: 'images/antes-depois-5.1.jpg' }
-      ],
-      gallery: [
-        { src: 'images/antes-depois-4.jpg',   type: 'before' },
-        { src: 'images/antes-depois-4.1.jpg', type: 'after'  },
-        { src: 'images/antes-depois-5.jpg',   type: 'before' },
-        { src: 'images/antes-depois-5.1.jpg', type: 'after'  },
-        { src: 'images/detail-int-1.jpg',     type: 'detail' },
-        { src: 'images/detail-int-2.jpg',     type: 'detail' },
-        { src: 'images/detail-int-3.jpg',     type: 'detail' }
-      ]
-    },
-    {
-      label: 'Power Washing', caption: 'Power Washing — Ridgefield, CT',
-      pairs: [
-        { before: 'images/antes-depois-6.jpg', after: 'images/antes-depois-6.1.jpg' },
-        { before: 'images/antes-depois-7.jpg', after: 'images/antes-depois-7.1.jpg' }
-      ],
-      gallery: [
-        { src: 'images/antes-depois-6.jpg',   type: 'before' },
-        { src: 'images/antes-depois-6.1.jpg', type: 'after'  },
-        { src: 'images/antes-depois-7.jpg',   type: 'before' },
-        { src: 'images/antes-depois-7.1.jpg', type: 'after'  },
-        { src: 'images/detail-pw-1.jpg',      type: 'detail' },
-        { src: 'images/detail-pw-2.jpg',      type: 'detail' }
-      ]
-    }
+  /* ── BEFORE & AFTER SLIDER + GALLERY ── */
+  /* Edit only this list to add/remove projects and image paths */
+  var BA_PROJECTS = [
+    { label: { en: 'Project 01', es: 'Proyecto 01', pt: 'Projeto 01' }, caption: { en: 'Project 01 - House exterior', es: 'Proyecto 01 - Exterior de casa', pt: 'Projeto 01 - Exterior casa' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
+    { label: { en: 'Project 02', es: 'Proyecto 02', pt: 'Projeto 02' }, caption: { en: 'Project 02 - Commercial exterior', es: 'Proyecto 02 - Exterior comercial', pt: 'Projeto 02 - Exterior comercial' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
+    { label: { en: 'Project 03', es: 'Proyecto 03', pt: 'Projeto 03' }, caption: { en: 'Project 03 - Living room interior', es: 'Proyecto 03 - Interior de sala', pt: 'Projeto 03 - Interior sala' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
+    { label: { en: 'Project 04', es: 'Proyecto 04', pt: 'Projeto 04' }, caption: { en: 'Project 04 - Kitchen interior', es: 'Proyecto 04 - Interior de cocina', pt: 'Projeto 04 - Interior cozinha' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
+    { label: { en: 'Project 05', es: 'Proyecto 05', pt: 'Projeto 05' }, caption: { en: 'Project 05 - Bathroom', es: 'Proyecto 05 - Bano', pt: 'Projeto 05 - Banheiro' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
+    { label: { en: 'Project 06', es: 'Proyecto 06', pt: 'Projeto 06' }, caption: { en: 'Project 06 - Facade washing', es: 'Proyecto 06 - Lavado de fachada', pt: 'Projeto 06 - Lavagem de fachada' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
+    { label: { en: 'Project 07', es: 'Proyecto 07', pt: 'Projeto 07' }, caption: { en: 'Project 07 - Deck and outdoor area', es: 'Proyecto 07 - Deck y area exterior', pt: 'Projeto 07 - Deck e area externa' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
+    { label: { en: 'Project 08', es: 'Proyecto 08', pt: 'Projeto 08' }, caption: { en: 'Project 08 - Full apartment', es: 'Proyecto 08 - Apartamento completo', pt: 'Projeto 08 - Apartamento completo' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] }
   ];
+
+  function pickLocalizedValue(input, fallback) {
+    if (input && typeof input === 'object') {
+      return (input[currentLang] || input.en || input.pt || input.es || fallback || '').trim();
+    }
+    return String(input || fallback || '').trim();
+  }
+
+  function placeholderKind(type) {
+    var labels = {
+      before: { en: 'Before', pt: 'Antes', es: 'Antes' },
+      after:  { en: 'After',  pt: 'Depois', es: 'Despues' },
+      detail: { en: 'Detail', pt: 'Detalhe', es: 'Detalle' }
+    };
+    var map = labels[type] || labels.detail;
+    return map[currentLang] || map.en;
+  }
+
+  function escHtml(v) {
+    return String(v || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function makePlaceholder(type, label, idx) {
+    var kind = placeholderKind(type);
+    var bg1 = type === 'before' ? '#10233f' : (type === 'after' ? '#8d1f1f' : '#1f2f52');
+    var bg2 = type === 'before' ? '#1f3d66' : (type === 'after' ? '#c63737' : '#314b7a');
+    var title = escHtml(label || 'Project');
+    var subtitle = escHtml(kind + ' ' + (idx + 1));
+    var svg = ''
+      + '<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">'
+      + '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">'
+      + '<stop offset="0%" stop-color="' + bg1 + '"/><stop offset="100%" stop-color="' + bg2 + '"/>'
+      + '</linearGradient></defs>'
+      + '<rect width="1600" height="900" fill="url(#g)"/>'
+      + '<rect x="70" y="70" width="1460" height="760" rx="22" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="3"/>'
+      + '<text x="800" y="430" fill="#ffffff" text-anchor="middle" font-family="Arial,sans-serif" font-size="66" font-weight="700">' + title + '</text>'
+      + '<text x="800" y="510" fill="rgba(255,255,255,0.82)" text-anchor="middle" font-family="Arial,sans-serif" font-size="38">' + subtitle + '</text>'
+      + '</svg>';
+    return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+  }
+
+  function imgOrPlaceholder(src, type, label, idx) {
+    var path = (src || '').trim();
+    return path ? path : makePlaceholder(type, label, idx);
+  }
+
+  function normalizeProjects(raw) {
+    var base = Array.isArray(raw) && raw.length ? raw : [
+      { label: { en: 'Project 01', es: 'Proyecto 01', pt: 'Projeto 01' }, caption: { en: 'Project 01', es: 'Proyecto 01', pt: 'Projeto 01' }, pairs: [ { before: '', after: '' } ], gallery: [] }
+    ];
+
+    return base.map(function (project, projectIndex) {
+      var label = pickLocalizedValue(project.label, 'Project ' + String(projectIndex + 1));
+      var caption = pickLocalizedValue(project.caption, label);
+      var rawPairs = Array.isArray(project.pairs) && project.pairs.length ? project.pairs : [ { before: '', after: '' } ];
+
+      var pairs = rawPairs.map(function (pair, pairIndex) {
+        var pairData = pair || {};
+        return {
+          before: imgOrPlaceholder(pairData.before, 'before', label, pairIndex),
+          after: imgOrPlaceholder(pairData.after, 'after', label, pairIndex)
+        };
+      });
+
+      var rawGallery = Array.isArray(project.gallery) ? project.gallery : [];
+      var gallery = [];
+
+      if (rawGallery.length) {
+        rawGallery.forEach(function (item, itemIndex) {
+          var g = item || {};
+          var type = g.type === 'before' || g.type === 'after' ? g.type : 'detail';
+          gallery.push({
+            src: imgOrPlaceholder(g.src, type, label, itemIndex),
+            type: type
+          });
+        });
+      } else {
+        pairs.forEach(function (pair, pairIndex) {
+          gallery.push({ src: pair.before, type: 'before' });
+          gallery.push({ src: pair.after, type: 'after' });
+          gallery.push({ src: makePlaceholder('detail', label, pairIndex), type: 'detail' });
+        });
+      }
+
+      return { label: label, caption: caption, pairs: pairs, gallery: gallery };
+    });
+  }
+
+  var projects = normalizeProjects(BA_PROJECTS);
 
   var curProj = 0, curPair = 0, dragging = false, lbImages = [], lbIdx = 0;
 
@@ -759,6 +827,46 @@
   var lbNext       = document.getElementById('baLbNext');
 
   if (!stage) return;
+
+  function getText(key, fallback) {
+    var langMap = I18N[currentLang] || {};
+    return langMap[key] || fallback || '';
+  }
+
+  function updateGalleryButton() {
+    if (!galBtn) return;
+    var icon = galBtn.classList.contains('is-open')
+      ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="16" height="16" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>';
+    var label = galBtn.classList.contains('is-open')
+      ? getText('ba_gallery_close', 'Close gallery')
+      : getText('ba_gallery_open', 'View full gallery of this project');
+    galBtn.innerHTML = icon + '<span>' + label + '</span>';
+  }
+
+  function syncBeforeAfterLanguage() {
+    if (!stage) return;
+    projects = normalizeProjects(BA_PROJECTS);
+    if (!projects.length) return;
+    if (curProj > projects.length - 1) curProj = projects.length - 1;
+    if (curProj < 0) curProj = 0;
+    if (curPair > projects[curProj].pairs.length - 1) curPair = projects[curProj].pairs.length - 1;
+    if (curPair < 0) curPair = 0;
+
+    renderTabs(curProj);
+    loadPair(curProj, curPair);
+    updateGalleryButton();
+
+    if (overlay.classList.contains('open')) {
+      overlayTitle.textContent = projects[curProj].caption + ' - ' + getText('ba_gallery_title', 'Full Gallery');
+      openGallery({ skipScroll: true });
+    }
+
+    if (lightbox.classList.contains('open') && lbImages.length) {
+      lbInfo.textContent = projects[curProj].caption;
+      lbImg.alt = pillLabel(lbImages[lbIdx].type) + ' photo ' + (lbIdx + 1);
+    }
+  }
 
   function setSlider(pct) {
     pct = Math.min(Math.max(pct, 2), 98);
@@ -810,14 +918,15 @@
     return 'ba-gal-pill ba-gal-pill-detail';
   }
   function pillLabel(type) {
-    if (type === 'before') return 'Before';
-    if (type === 'after')  return 'After';
-    return 'Detail';
+    if (type === 'before') return getText('ba_before', 'Before');
+    if (type === 'after')  return getText('ba_after', 'After');
+    return getText('ba_detail', 'Detail');
   }
 
-  function openGallery() {
+  function openGallery(opts) {
+    var options = opts || {};
     var proj = projects[curProj];
-    overlayTitle.textContent = proj.caption + ' — Full Gallery';
+    overlayTitle.textContent = proj.caption + ' - ' + getText('ba_gallery_title', 'Full Gallery');
     galGrid.innerHTML = '';
     lbImages = [];
     proj.gallery.forEach(function (item, i) {
@@ -834,7 +943,7 @@
       var hov = document.createElement('div');
       hov.className = 'ba-gal-hover';
       var zpill = document.createElement('span');
-      zpill.className = pillClass(item.type); zpill.textContent = '+ Expand';
+      zpill.className = pillClass(item.type); zpill.textContent = '+ ' + getText('ba_expand', 'Expand');
       hov.appendChild(zpill);
       cell.appendChild(img); cell.appendChild(tag); cell.appendChild(hov);
       var idx = i;
@@ -844,8 +953,11 @@
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
     galBtn.setAttribute('aria-expanded', 'true');
-    galBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Close gallery';
-    overlay.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    galBtn.classList.add('is-open');
+    updateGalleryButton();
+    if (!options.skipScroll) {
+      overlay.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 
   function closeGallery() {
@@ -854,7 +966,8 @@
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
     galBtn.setAttribute('aria-expanded', 'false');
-    galBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="16" height="16" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> View full gallery of this project';
+    galBtn.classList.remove('is-open');
+    updateGalleryButton();
   }
 
   function openLightbox(idx) {
@@ -890,7 +1003,9 @@
 
   renderTabs(0);
   loadPair(0, 0);
-}
+
+  updateGalleryButton();
+
   /* ── SCROLL REVEAL ── */
   if ('IntersectionObserver' in window) {
     var styleEl = document.createElement('style');
