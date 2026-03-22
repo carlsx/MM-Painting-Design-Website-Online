@@ -378,80 +378,78 @@
         </div>
       </div>
     </section>
+    
+<!-- ===== BEFORE & AFTER ===== -->
+<section class="section before-after-section" id="transformations" aria-labelledby="beforeAfterHeading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow light">The MM Difference</span>
+      <h2 class="section-title light" id="beforeAfterHeading">Before &amp; After</h2>
+      <p class="section-sub light">Drag the slider · switch photos · open the full gallery for every detail.</p>
+    </div>
 
-    <!-- ===== BEFORE & AFTER ===== -->
-    <!-- DEVELOPER NOTE: Place before/after image pairs in /images/ using these filenames:
-         Before: antes-depois-1.jpg  |  After: antes-depois-1.1.jpg  (repeat for pairs 2 and 3) -->
-    <section class="section before-after-section" id="transformations" aria-labelledby="beforeAfterHeading">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow" data-i18n="ba_eyebrow">The MM Difference</span>
-          <h2 class="section-title" id="beforeAfterHeading" data-i18n="ba_title">Before &amp; After</h2>
-          <p class="section-sub" data-i18n="ba_sub">See what a detail-oriented finish actually looks like.</p>
+    <div class="ba-wrapper">
+      <div class="ba-tabs-row" id="baTabs"></div>
+
+      <div class="ba-stage" id="baStage">
+        <div class="ba-before" id="baBefore"></div>
+        <div class="ba-after"  id="baAfter"></div>
+        <div class="ba-divider-line" id="baDivLine"></div>
+        <div class="ba-handle" id="baHandle">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M8 5l-5 7 5 7M16 5l5 7-5 7" stroke="#D12B2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
+        <span class="ba-badge ba-badge-before">Before</span>
+        <span class="ba-badge ba-badge-after">After</span>
+        <span class="ba-counter" id="baCounter"></span>
+      </div>
 
-        <div class="ba-grid">
+      <div class="ba-thumbs-row" id="baThumbs"></div>
+      <p class="ba-caption-text" id="baCaption"></p>
 
-          <div class="ba-pair">
-            <div class="ba-images">
-              <div class="ba-slot">
-                <img src="images/antes-depois-1.jpg" alt="Before: exterior siding before MM Painting treatment" class="ba-img" loading="lazy" />
-                <span class="ba-label ba-label-before" data-i18n="ba_before">Before</span>
-              </div>
-              <div class="ba-divider" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="ba-slot">
-                <img src="images/antes-depois-1.1.jpg" alt="After: exterior freshly painted and restored by MM Painting & Design" class="ba-img" loading="lazy" />
-                <span class="ba-label ba-label-after" data-i18n="ba_after">After</span>
-              </div>
-            </div>
-            <p class="ba-caption" data-i18n="ba1_caption">Exterior Repaint — Danbury, CT</p>
-          </div>
+      <div class="ba-gallery-btn-wrap">
+        <button class="ba-gallery-btn" id="baGalBtn" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          View full gallery of this project
+        </button>
+      </div>
 
-          <div class="ba-pair">
-            <div class="ba-images">
-              <div class="ba-slot">
-                <img src="images/antes-depois-2.jpg" alt="Before: interior room in need of fresh paint" class="ba-img" loading="lazy" />
-                <span class="ba-label ba-label-before" data-i18n="ba_before">Before</span>
-              </div>
-              <div class="ba-divider" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="ba-slot">
-                <img src="images/antes-depois-2.1.jpg" alt="After: interior room fully repainted with clean trim and smooth walls" class="ba-img" loading="lazy" />
-                <span class="ba-label ba-label-after" data-i18n="ba_after">After</span>
-              </div>
-            </div>
-            <p class="ba-caption" data-i18n="ba2_caption">Interior Refresh — Bethel, CT</p>
-          </div>
-
-          <div class="ba-pair">
-            <div class="ba-images">
-              <div class="ba-slot">
-                <img src="images/antes-depois-3.jpg" alt="Before: deck and surfaces before professional power washing" class="ba-img" loading="lazy" />
-                <span class="ba-label ba-label-before" data-i18n="ba_before">Before</span>
-              </div>
-              <div class="ba-divider" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="ba-slot">
-                <img src="images/antes-depois-3.1.jpg" alt="After: deck fully cleaned and restored after MM power washing service" class="ba-img" loading="lazy" />
-                <span class="ba-label ba-label-after" data-i18n="ba_after">After</span>
-              </div>
-            </div>
-            <p class="ba-caption" data-i18n="ba3_caption">Power Washing — Ridgefield, CT</p>
-          </div>
-
+      <div class="ba-overlay" id="baOverlay" aria-hidden="true">
+        <div class="ba-overlay-header">
+          <span class="ba-overlay-title" id="baOverlayTitle"></span>
+          <button class="ba-close-btn" id="baCloseOverlay" aria-label="Close gallery">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+            Close
+          </button>
         </div>
+        <div class="ba-gal-grid" id="baGalGrid"></div>
+      </div>
 
-        <div class="ba-cta">
-          <a href="#contact" class="btn btn-primary btn-lg">
-            <span data-i18n="ba_cta">Get a Free Estimate</span>
-          </a>
+      <div class="ba-lightbox" id="baLightbox" aria-hidden="true">
+        <div class="ba-lb-top">
+          <span class="ba-lb-info" id="baLbInfo"></span>
+          <button class="ba-lb-close" id="baLbClose">Close</button>
+        </div>
+        <img class="ba-lb-img" id="baLbImg" src="" alt="" />
+        <div class="ba-lb-nav">
+          <button class="ba-lb-arrow" id="baLbPrev" aria-label="Previous photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <span class="ba-lb-info" id="baLbCount"></span>
+          <button class="ba-lb-arrow" id="baLbNext" aria-label="Next photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- ===== REVIEWS ===== -->
     <section class="section reviews-section" id="reviews" aria-labelledby="reviewsHeading">
