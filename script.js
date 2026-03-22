@@ -679,7 +679,218 @@
       });
     });
   }
+/* ── BEFORE & AFTER SLIDER + GALLERY ── */
+(function () {
+  var projects = [
+    {
+      label: 'Exterior', caption: 'Exterior Repaint — Danbury, CT',
+      pairs: [
+        { before: 'images/antes-depois-1.jpg',   after: 'images/antes-depois-1.1.jpg' },
+        { before: 'images/antes-depois-2.jpg',   after: 'images/antes-depois-2.1.jpg' },
+        { before: 'images/antes-depois-3.jpg',   after: 'images/antes-depois-3.1.jpg' }
+      ],
+      gallery: [
+        { src: 'images/antes-depois-1.jpg',   type: 'before' },
+        { src: 'images/antes-depois-1.1.jpg', type: 'after'  },
+        { src: 'images/antes-depois-2.jpg',   type: 'before' },
+        { src: 'images/antes-depois-2.1.jpg', type: 'after'  },
+        { src: 'images/antes-depois-3.jpg',   type: 'before' },
+        { src: 'images/antes-depois-3.1.jpg', type: 'after'  },
+        { src: 'images/detail-ext-1.jpg',     type: 'detail' },
+        { src: 'images/detail-ext-2.jpg',     type: 'detail' },
+        { src: 'images/detail-ext-3.jpg',     type: 'detail' }
+      ]
+    },
+    {
+      label: 'Interior', caption: 'Interior Refresh — Bethel, CT',
+      pairs: [
+        { before: 'images/antes-depois-4.jpg', after: 'images/antes-depois-4.1.jpg' },
+        { before: 'images/antes-depois-5.jpg', after: 'images/antes-depois-5.1.jpg' }
+      ],
+      gallery: [
+        { src: 'images/antes-depois-4.jpg',   type: 'before' },
+        { src: 'images/antes-depois-4.1.jpg', type: 'after'  },
+        { src: 'images/antes-depois-5.jpg',   type: 'before' },
+        { src: 'images/antes-depois-5.1.jpg', type: 'after'  },
+        { src: 'images/detail-int-1.jpg',     type: 'detail' },
+        { src: 'images/detail-int-2.jpg',     type: 'detail' },
+        { src: 'images/detail-int-3.jpg',     type: 'detail' }
+      ]
+    },
+    {
+      label: 'Power Washing', caption: 'Power Washing — Ridgefield, CT',
+      pairs: [
+        { before: 'images/antes-depois-6.jpg', after: 'images/antes-depois-6.1.jpg' },
+        { before: 'images/antes-depois-7.jpg', after: 'images/antes-depois-7.1.jpg' }
+      ],
+      gallery: [
+        { src: 'images/antes-depois-6.jpg',   type: 'before' },
+        { src: 'images/antes-depois-6.1.jpg', type: 'after'  },
+        { src: 'images/antes-depois-7.jpg',   type: 'before' },
+        { src: 'images/antes-depois-7.1.jpg', type: 'after'  },
+        { src: 'images/detail-pw-1.jpg',      type: 'detail' },
+        { src: 'images/detail-pw-2.jpg',      type: 'detail' }
+      ]
+    }
+  ];
 
+  var curProj = 0, curPair = 0, dragging = false, lbImages = [], lbIdx = 0;
+
+  var stage        = document.getElementById('baStage');
+  var elBefore     = document.getElementById('baBefore');
+  var elAfter      = document.getElementById('baAfter');
+  var divLine      = document.getElementById('baDivLine');
+  var handle       = document.getElementById('baHandle');
+  var elTabs       = document.getElementById('baTabs');
+  var elThumbs     = document.getElementById('baThumbs');
+  var elCaption    = document.getElementById('baCaption');
+  var elCounter    = document.getElementById('baCounter');
+  var galBtn       = document.getElementById('baGalBtn');
+  var overlay      = document.getElementById('baOverlay');
+  var overlayTitle = document.getElementById('baOverlayTitle');
+  var galGrid      = document.getElementById('baGalGrid');
+  var closeOverlay = document.getElementById('baCloseOverlay');
+  var lightbox     = document.getElementById('baLightbox');
+  var lbImg        = document.getElementById('baLbImg');
+  var lbInfo       = document.getElementById('baLbInfo');
+  var lbCount      = document.getElementById('baLbCount');
+  var lbClose      = document.getElementById('baLbClose');
+  var lbPrev       = document.getElementById('baLbPrev');
+  var lbNext       = document.getElementById('baLbNext');
+
+  if (!stage) return;
+
+  function setSlider(pct) {
+    pct = Math.min(Math.max(pct, 2), 98);
+    elAfter.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    divLine.style.left = pct + '%';
+    handle.style.left  = pct + '%';
+  }
+
+  function loadPair(pi, pai) {
+    var pair = projects[pi].pairs[pai];
+    elBefore.style.backgroundImage = 'url(' + pair.before + ')';
+    elAfter.style.backgroundImage  = 'url(' + pair.after  + ')';
+    elCaption.textContent = projects[pi].caption;
+    var tot = projects[pi].pairs.length;
+    elCounter.textContent = tot > 1 ? (pai + 1) + ' / ' + tot : '';
+    setSlider(50);
+    renderThumbs(pi, pai);
+  }
+
+  function renderTabs(pi) {
+    elTabs.innerHTML = '';
+    projects.forEach(function (p, i) {
+      var t = document.createElement('button');
+      t.className = 'ba-tab' + (i === pi ? ' active' : '');
+      t.textContent = p.label;
+      t.onclick = function () { curProj = i; curPair = 0; renderTabs(i); loadPair(i, 0); closeGallery(); };
+      elTabs.appendChild(t);
+    });
+  }
+
+  function renderThumbs(pi, pai) {
+    elThumbs.innerHTML = '';
+    var pairs = projects[pi].pairs;
+    if (pairs.length < 2) return;
+    pairs.forEach(function (pair, i) {
+      var th = document.createElement('div');
+      th.className = 'ba-thumb' + (i === pai ? ' active' : '');
+      var img = document.createElement('img');
+      img.src = pair.before; img.alt = 'Photo ' + (i + 1);
+      th.appendChild(img);
+      th.onclick = function () { curPair = i; loadPair(pi, i); };
+      elThumbs.appendChild(th);
+    });
+  }
+
+  function pillClass(type) {
+    if (type === 'before') return 'ba-gal-pill ba-gal-pill-before';
+    if (type === 'after')  return 'ba-gal-pill ba-gal-pill-after';
+    return 'ba-gal-pill ba-gal-pill-detail';
+  }
+  function pillLabel(type) {
+    if (type === 'before') return 'Before';
+    if (type === 'after')  return 'After';
+    return 'Detail';
+  }
+
+  function openGallery() {
+    var proj = projects[curProj];
+    overlayTitle.textContent = proj.caption + ' — Full Gallery';
+    galGrid.innerHTML = '';
+    lbImages = [];
+    proj.gallery.forEach(function (item, i) {
+      lbImages.push({ src: item.src, type: item.type });
+      var cell = document.createElement('div');
+      cell.className = 'ba-gal-item';
+      var img = document.createElement('img');
+      img.className = 'ba-gal-img'; img.src = item.src; img.alt = pillLabel(item.type) + ' photo ' + (i + 1);
+      var tag = document.createElement('div');
+      tag.className = 'ba-gal-tag';
+      var pill = document.createElement('span');
+      pill.className = pillClass(item.type); pill.textContent = pillLabel(item.type);
+      tag.appendChild(pill);
+      var hov = document.createElement('div');
+      hov.className = 'ba-gal-hover';
+      var zpill = document.createElement('span');
+      zpill.className = pillClass(item.type); zpill.textContent = '+ Expand';
+      hov.appendChild(zpill);
+      cell.appendChild(img); cell.appendChild(tag); cell.appendChild(hov);
+      var idx = i;
+      cell.onclick = function () { openLightbox(idx); };
+      galGrid.appendChild(cell);
+    });
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    galBtn.setAttribute('aria-expanded', 'true');
+    galBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Close gallery';
+    overlay.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function closeGallery() {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    galBtn.setAttribute('aria-expanded', 'false');
+    galBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="16" height="16" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> View full gallery of this project';
+  }
+
+  function openLightbox(idx) {
+    lbIdx = idx;
+    lbImg.src = lbImages[idx].src;
+    lbImg.alt = pillLabel(lbImages[idx].type) + ' photo ' + (idx + 1);
+    lbCount.textContent = (idx + 1) + ' / ' + lbImages.length;
+    lbInfo.textContent = projects[curProj].caption;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightbox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  galBtn.onclick      = function () { overlay.classList.contains('open') ? closeGallery() : openGallery(); };
+  closeOverlay.onclick = closeGallery;
+  lbClose.onclick     = function () { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
+  lbPrev.onclick      = function () { lbIdx = (lbIdx - 1 + lbImages.length) % lbImages.length; openLightbox(lbIdx); };
+  lbNext.onclick      = function () { lbIdx = (lbIdx + 1) % lbImages.length; openLightbox(lbIdx); };
+
+  function getPct(e) {
+    var rect = stage.getBoundingClientRect();
+    var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    return (x / rect.width) * 100;
+  }
+
+  handle.addEventListener('mousedown',  function (e) { dragging = true; e.preventDefault(); });
+  handle.addEventListener('touchstart', function (e) { dragging = true; e.preventDefault(); }, { passive: false });
+  document.addEventListener('mousemove', function (e) { if (dragging) setSlider(getPct(e)); });
+  document.addEventListener('touchmove', function (e) { if (dragging) { setSlider(getPct(e)); e.preventDefault(); } }, { passive: false });
+  document.addEventListener('mouseup',   function ()  { dragging = false; });
+  document.addEventListener('touchend',  function ()  { dragging = false; });
+  stage.addEventListener('click', function (e) { if (!dragging) setSlider(getPct(e)); });
+
+  renderTabs(0);
+  loadPair(0, 0);
+}
   /* ── SCROLL REVEAL ── */
   if ('IntersectionObserver' in window) {
     var styleEl = document.createElement('style');
