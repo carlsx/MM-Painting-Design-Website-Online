@@ -698,25 +698,35 @@
   /* ── BEFORE & AFTER SLIDER + GALLERY ── */
   /* Edit only this list to add/remove projects and image paths */
   var BA_PROJECTS = [
-    { label: { en: 'Project 01', es: 'Proyecto 01', pt: 'Projeto 01' }, caption: { en: 'Project 01 - House interior', es: 'Proyecto 01 - Interior de casa', pt: 'Projeto 01 - Interior casa' }, pairs: [ { before: 'befbefore3.jpg', after: 'befafter6.jpg' }, ], gallery: [
-      { src: 'befafter1dani.jpg', type: 'after' },
-      { src: 'befafter2dani.jpg', type: 'after' },
-      { src: 'befafter3dani.jpg', type: 'after' },
-      { src: 'befafter4dani.jpg', type: 'after' },
-      { scr: 'befafter5dani.jpg', type: 'after' },
-      { scr: 'befafter6dani.jpg', type: 'after' },
-      { scr: 'befafter7dani.jpg', type: 'after' },
-      { scr: 'befbefore1dani.jpg', type: 'before' },
-      { scr: 'befbefore2dani.jpg', type:'before' },
-      { scr: 'befbefore3dani.jpg', type: 'before'}
-    ] },
-    { label: { en: 'Project 02', es: 'Proyecto 02', pt: 'Projeto 02' }, caption: { en: 'Project 02 - Commercial exterior', es: 'Proyecto 02 - Exterior comercial', pt: 'Projeto 02 - Exterior comercial' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
-    { label: { en: 'Project 03', es: 'Proyecto 03', pt: 'Projeto 03' }, caption: { en: 'Project 03 - Living room interior', es: 'Proyecto 03 - Interior de sala', pt: 'Projeto 03 - Interior sala' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
-    { label: { en: 'Project 04', es: 'Proyecto 04', pt: 'Projeto 04' }, caption: { en: 'Project 04 - Kitchen interior', es: 'Proyecto 04 - Interior de cocina', pt: 'Projeto 04 - Interior cozinha' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
-    { label: { en: 'Project 05', es: 'Proyecto 05', pt: 'Projeto 05' }, caption: { en: 'Project 05 - Bathroom', es: 'Proyecto 05 - Bano', pt: 'Projeto 05 - Banheiro' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
-    { label: { en: 'Project 06', es: 'Proyecto 06', pt: 'Projeto 06' }, caption: { en: 'Project 06 - Facade washing', es: 'Proyecto 06 - Lavado de fachada', pt: 'Projeto 06 - Lavagem de fachada' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
-    { label: { en: 'Project 07', es: 'Proyecto 07', pt: 'Projeto 07' }, caption: { en: 'Project 07 - Deck and outdoor area', es: 'Proyecto 07 - Deck y area exterior', pt: 'Projeto 07 - Deck e area externa' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
-    { label: { en: 'Project 08', es: 'Proyecto 08', pt: 'Projeto 08' }, caption: { en: 'Project 08 - Full apartment', es: 'Proyecto 08 - Apartamento completo', pt: 'Projeto 08 - Apartamento completo' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] }
+    {
+      label: {
+        en: 'Built-ins Makeover',
+        es: 'Renovacion de Muebles Empotrados',
+        pt: 'Transformacao de Marcenaria'
+      },
+      caption: {
+        en: 'Custom Built-ins - Before & After',
+        es: 'Muebles Empotrados a Medida - Antes y Despues',
+        pt: 'Marcenaria Sob Medida - Antes e Depois'
+      },
+      pairs: [
+        { before: 'befbefore1dani.jpg', after: 'befafter2dani.jpg' },
+        { before: 'befbefore2dani.jpg', after: 'befafter6dani.jpg' },
+        { before: 'befbefore3.jpg', after: 'befafter4dani.jpg' }
+      ],
+      gallery: [
+        { src: 'befbefore1dani.jpg', type: 'before' },
+        { src: 'befafter2dani.jpg', type: 'after' },
+        { src: 'befbefore2dani.jpg', type: 'before' },
+        { src: 'befafter6dani.jpg', type: 'after' },
+        { src: 'befbefore3.jpg', type: 'before' },
+        { src: 'befafter4dani.jpg', type: 'after' },
+        { src: 'befafter1dani.jpg', type: 'after' },
+        { src: 'befafter3dani.jpg', type: 'after' },
+        { src: 'befafter5dani.jpg', type: 'after' },
+        { src: 'befafter7dani.jpg', type: 'after' }
+      ]
+    }
   ];
 
   function pickLocalizedValue(input, fallback) {
@@ -899,6 +909,11 @@
 
   function renderTabs(pi) {
     elTabs.innerHTML = '';
+    if (projects.length < 2) {
+      elTabs.style.display = 'none';
+      return;
+    }
+    elTabs.style.display = 'flex';
     projects.forEach(function (p, i) {
       var t = document.createElement('button');
       t.className = 'ba-tab' + (i === pi ? ' active' : '');
