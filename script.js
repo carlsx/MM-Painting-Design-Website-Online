@@ -711,7 +711,7 @@
       },
       pairs: [
         { before: 'befbefore2dani.jpg', after: 'befafter6dani.jpg' },
-        { before: 'befafter4dani.jpg', after: 'befbefore3dani.jpg' },
+        { before: 'befbefore1dani.jpg', after: 'befbefore3dani.jpg' },
       ],
       gallery: [
         { src: 'befbefore1dani.jpg', type: 'before' },
