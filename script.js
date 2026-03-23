@@ -710,7 +710,7 @@
         pt: 'Marcenaria Sob Medida - Antes e Depois'
       },
       pairs: [
-        { before: 'befbefore3dani.jpg', after: 'befafter6dani.jpg' },
+        { before: 'befbefore2dani.jpg', after: 'befafter6dani.jpg' },
         { before: 'befbefore2dani.jpg', after: 'befafter4dani.jpg' },
       ],
       gallery: [
