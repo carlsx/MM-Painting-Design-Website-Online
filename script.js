@@ -698,7 +698,7 @@
   /* ── BEFORE & AFTER SLIDER + GALLERY ── */
   /* Edit only this list to add/remove projects and image paths */
   var BA_PROJECTS = [
-    { label: { en: 'Project 01', es: 'Proyecto 01', pt: 'Projeto 01' }, caption: { en: 'Project 01 - House interior', es: 'Proyecto 01 - Interior de casa', pt: 'Projeto 01 - Interior casa' }, pairs: [ { before: 'befbefore3.jpg', after: 'befbefore3.jpg' }, { before: 'befbefore3.jpg', after: 'befbefore3.jpg' } ], gallery: [
+    { label: { en: 'Project 01', es: 'Proyecto 01', pt: 'Projeto 01' }, caption: { en: 'Project 01 - House interior', es: 'Proyecto 01 - Interior de casa', pt: 'Projeto 01 - Interior casa' }, pairs: [ { before: 'befbefore3.jpg', after: 'befafter6.jpg' }, ], gallery: [
       { src: 'befafter1dani.jpg', type: 'after' },
       { src: 'befafter2dani.jpg', type: 'after' },
       { src: 'befafter3dani.jpg', type: 'after' },
