@@ -698,7 +698,18 @@
   /* ── BEFORE & AFTER SLIDER + GALLERY ── */
   /* Edit only this list to add/remove projects and image paths */
   var BA_PROJECTS = [
-    { label: { en: 'Project 01', es: 'Proyecto 01', pt: 'Projeto 01' }, caption: { en: 'Project 01 - House exterior', es: 'Proyecto 01 - Exterior de casa', pt: 'Projeto 01 - Exterior casa' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
+    { label: { en: 'Project 01', es: 'Proyecto 01', pt: 'Projeto 01' }, caption: { en: 'Project 01 - House interior', es: 'Proyecto 01 - Interior de casa', pt: 'Projeto 01 - Interior casa' }, pairs: [ { before: 'befbefore3.jpg', after: 'befbefore3.jpg' }, { before: 'befbefore3.jpg', after: 'befbefore3.jpg' } ], gallery: [
+      { src: 'befafter1dani.jpg', type: 'after' },
+      { src: 'befafter2dani.jpg', type: 'after' },
+      { src: 'befafter3dani.jpg', type: 'after' },
+      { src: 'befafter4dani.jpg', type: 'after' },
+      { scr: 'befafter5dani.jpg', type: 'after' },
+      { scr: 'befafter6dani.jpg', type: 'after' },
+      { scr: 'befafter7dani.jpg', type: 'after' },
+      { scr: 'befbefore1dani.jpg', type: 'before' },
+      { scr: 'befbefore2dani.jpg', type:'before' },
+      { scr: 'befbefore3dani.jpg', type: 'before'}
+    ] },
     { label: { en: 'Project 02', es: 'Proyecto 02', pt: 'Projeto 02' }, caption: { en: 'Project 02 - Commercial exterior', es: 'Proyecto 02 - Exterior comercial', pt: 'Projeto 02 - Exterior comercial' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
     { label: { en: 'Project 03', es: 'Proyecto 03', pt: 'Projeto 03' }, caption: { en: 'Project 03 - Living room interior', es: 'Proyecto 03 - Interior de sala', pt: 'Projeto 03 - Interior sala' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
     { label: { en: 'Project 04', es: 'Proyecto 04', pt: 'Projeto 04' }, caption: { en: 'Project 04 - Kitchen interior', es: 'Proyecto 04 - Interior de cocina', pt: 'Projeto 04 - Interior cozinha' }, pairs: [ { before: '', after: '' }, { before: '', after: '' } ], gallery: [] },
