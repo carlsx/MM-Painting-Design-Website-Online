@@ -8,8 +8,7 @@
 
   /* ════════════════════════════════════════════════════
      I18N TRANSLATIONS
-     City names (Danbury, Bethel, Brookfield, Ridgefield,
-     New Milford) are intentionally kept in English.
+     Keep copy aligned between EN / PT / ES.
   ════════════════════════════════════════════════════ */
   var I18N = {
 
@@ -89,10 +88,13 @@
       rev3_text:     '"The exterior of our house looks incredible. They took their time on the prep, filled in every crack, and the color came out exactly as we envisioned. Worth every penny."',
       rev_google:    'See Us on Google',
       about_eyebrow: 'About Us',
-      about_title:   "Danbury's Premium Painting Crew",
+      about_title:   "Connecticut's Premium Painting Crew",
       about_p1:      'MM Painting & Design was built on a simple idea: paint applied with care looks completely different. We sweat every detail — the prep, the edges, the final walkthrough — because we know that\'s what separates a good job from a great one.',
-      about_p2:      'We serve homeowners and businesses across <strong>Danbury, Bethel, Brookfield, Ridgefield, and New Milford, CT</strong>. No subcontractors. No shortcuts. Every project gets our full attention.',
+      about_p2:      'We serve homeowners and businesses across <strong>the entire region</strong>. No subcontractors. No shortcuts. Every project gets our full attention.',
       about_p3:      "When you hire MM, you get a team that communicates clearly, respects your property, and delivers a finish that holds up. That's our standard. Every time.",
+      about_tag1:    'Entire Region',
+      about_tag2:    'Residential',
+      about_tag3:    'Commercial',
       stat1: 'Jobs Completed', stat2: 'Years Experience', stat3: 'Google Rating',
       faq_eyebrow:   'Common Questions',
       faq_title:     'Frequently Asked Questions',
@@ -101,7 +103,7 @@
       faq2_q:        'How long does a typical job take?',
       faq2_a:        'It depends on scope. An average interior room takes 1–2 days. Full interiors or exterior repaints typically run 3–7 days. We give you a firm timeline during your estimate.',
       faq3_q:        'What areas do you serve?',
-      faq3_a:        'We primarily serve Danbury, Bethel, Brookfield, Ridgefield, and New Milford, CT. Contact us if you\'re in a neighboring town — we may be able to accommodate.',
+      faq3_a:        'We serve the entire region and nearby communities. Contact us with your location and we\'ll confirm availability.',
       faq4_q:        'What paint brands do you use?',
       faq4_a:        'We work with premium brands including Benjamin Moore and Sherwin-Williams. We recommend specific product lines based on your surface type and desired finish. You can also supply your own paint if preferred.',
       faq5_q:        'How do you protect furniture and floors?',
@@ -111,7 +113,7 @@
       contact_eyebrow: 'Get Started',
       contact_title:   'Request a Free Estimate',
       contact_sub:     'No pressure. Just a straight answer and a fair price.',
-      contact_area:    'Service Area: Danbury, CT & Nearby',
+      contact_area:    'Service Area: Entire Region',
       contact_hours:   'Mon–Fri 8am–6pm | Sat 8am–2pm',
       contact_google:  'Read Our Google Reviews',
       form_name:       'Full Name',
@@ -123,6 +125,7 @@
       footer_links:    'Quick Links',
       footer_contact_title: 'Contact',
       footer_copy:     'All rights reserved.',
+      footer_service_region: '📍 Serving the entire region',
       form_err_name:   'Please enter your full name.',
       form_err_phone:  'Please enter a valid phone number.',
       form_err_email:  'Please enter a valid email address.',
@@ -207,10 +210,13 @@
       rev3_text:     '"O exterior da nossa casa ficou incrível. Foram cuidadosos no preparo, tamparam cada rachadura, e a cor saiu exatamente como imaginamos. Valeu cada centavo."',
       rev_google:    'Ver no Google',
       about_eyebrow: 'Sobre Nós',
-      about_title:   'A Equipe Premium de Pintura de Danbury',
+      about_title:   'A Equipe Premium de Pintura de Connecticut',
       about_p1:      'A MM Painting & Design foi criada com uma ideia simples: pintura aplicada com cuidado tem resultado completamente diferente. Nos preocupamos com cada detalhe — a preparação, as bordas, a vistoria final.',
-      about_p2:      'Atendemos residências e empresas em <strong>Danbury, Bethel, Brookfield, Ridgefield e New Milford, CT</strong>. Sem terceirização. Sem atalhos. Atenção total em cada projeto.',
+      about_p2:      'Atendemos residências e empresas em <strong>toda a região</strong>. Sem terceirização. Sem atalhos. Atenção total em cada projeto.',
       about_p3:      'Quando você contrata a MM, recebe uma equipe que se comunica com clareza, respeita sua propriedade e entrega um acabamento duradouro. Esse é o nosso padrão. Sempre.',
+      about_tag1:    'Toda a Região',
+      about_tag2:    'Residencial',
+      about_tag3:    'Comercial',
       stat1: 'Trabalhos Concluídos', stat2: 'Anos de Experiência', stat3: 'Avaliação Google',
       faq_eyebrow:   'Perguntas Frequentes',
       faq_title:     'Dúvidas Comuns',
@@ -219,7 +225,7 @@
       faq2_q:        'Quanto tempo dura um serviço típico?',
       faq2_a:        'Depende do escopo. Um cômodo interno leva 1–2 dias. Interiores completos ou repinturas externas geralmente levam 3–7 dias.',
       faq3_q:        'Quais áreas vocês atendem?',
-      faq3_a:        'Atendemos principalmente Danbury, Bethel, Brookfield, Ridgefield e New Milford, CT. Entre em contato se estiver em uma cidade vizinha — podemos conseguir atender.',
+      faq3_a:        'Atendemos toda a região e comunidades próximas. Envie sua localização e confirmamos a disponibilidade.',
       faq4_q:        'Quais marcas de tinta vocês usam?',
       faq4_a:        'Trabalhamos com marcas premium como Benjamin Moore e Sherwin-Williams. Recomendamos linhas específicas conforme o tipo de superfície e acabamento desejado.',
       faq5_q:        'Como vocês protegem móveis e pisos?',
@@ -229,7 +235,7 @@
       contact_eyebrow: 'Comece Agora',
       contact_title:   'Solicite um Orçamento Gratuito',
       contact_sub:     'Sem pressão. Apenas uma resposta direta e um preço justo.',
-      contact_area:    'Área de Atendimento: Danbury, CT & Arredores',
+      contact_area:    'Área de Atendimento: Toda a Região',
       contact_hours:   'Seg–Sex 8h–18h | Sáb 8h–14h',
       contact_google:  'Ler Nossas Avaliações no Google',
       form_name:       'Nome Completo',
@@ -241,6 +247,7 @@
       footer_links:    'Links Rápidos',
       footer_contact_title: 'Contato',
       footer_copy:     'Todos os direitos reservados.',
+      footer_service_region: '📍 Atendemos toda a região',
       form_err_name:   'Por favor, insira seu nome completo.',
       form_err_phone:  'Por favor, insira um telefone válido.',
       form_err_email:  'Por favor, insira um e-mail válido.',
@@ -325,10 +332,13 @@
       rev3_text:     '"El exterior de nuestra casa quedó increíble. Se tomaron su tiempo en la preparación, rellenaron cada grieta, y el color quedó exactamente como lo imaginamos. Valió cada centavo."',
       rev_google:    'Vernos en Google',
       about_eyebrow: 'Sobre Nosotros',
-      about_title:   'El Equipo Premium de Pintura de Danbury',
+      about_title:   'El Equipo Premium de Pintura de Connecticut',
       about_p1:      'MM Painting & Design fue fundada con una idea simple: la pintura aplicada con cuidado luce completamente diferente. Nos esforzamos en cada detalle — la preparación, los bordes, la inspección final.',
-      about_p2:      'Atendemos hogares y empresas en <strong>Danbury, Bethel, Brookfield, Ridgefield y New Milford, CT</strong>. Sin subcontratistas. Sin atajos. Atención completa en cada proyecto.',
+      about_p2:      'Atendemos hogares y empresas en <strong>toda la región</strong>. Sin subcontratistas. Sin atajos. Atención completa en cada proyecto.',
       about_p3:      'Cuando contrata a MM, obtiene un equipo que se comunica claramente, respeta su propiedad y entrega un acabado duradero. Ese es nuestro estándar. Siempre.',
+      about_tag1:    'Toda la Región',
+      about_tag2:    'Residencial',
+      about_tag3:    'Comercial',
       stat1: 'Trabajos Completados', stat2: 'Años de Experiencia', stat3: 'Calificación Google',
       faq_eyebrow:   'Preguntas Frecuentes',
       faq_title:     'Preguntas Comunes',
@@ -337,7 +347,7 @@
       faq2_q:        '¿Cuánto dura un trabajo típico?',
       faq2_a:        'Depende del alcance. Una habitación interior promedio toma 1–2 días. Interiores completos o repinturas exteriores suelen tomar 3–7 días.',
       faq3_q:        '¿Qué áreas atienden?',
-      faq3_a:        'Atendemos principalmente Danbury, Bethel, Brookfield, Ridgefield y New Milford, CT. Contáctenos si está en una ciudad cercana — podemos acomodarle.',
+      faq3_a:        'Atendemos toda la región y comunidades cercanas. Compártanos su ubicación y confirmamos disponibilidad.',
       faq4_q:        '¿Qué marcas de pintura usan?',
       faq4_a:        'Trabajamos con marcas premium como Benjamin Moore y Sherwin-Williams. Recomendamos líneas específicas según el tipo de superficie y acabado deseado.',
       faq5_q:        '¿Cómo protegen muebles y pisos?',
@@ -347,7 +357,7 @@
       contact_eyebrow: 'Comenzar',
       contact_title:   'Solicite un Presupuesto Gratuito',
       contact_sub:     'Sin presión. Solo una respuesta directa y un precio justo.',
-      contact_area:    'Área de Servicio: Danbury, CT y Alrededores',
+      contact_area:    'Área de Servicio: Toda la Región',
       contact_hours:   'Lun–Vie 8am–6pm | Sáb 8am–2pm',
       contact_google:  'Leer Nuestras Reseñas en Google',
       form_name:       'Nombre Completo',
@@ -359,6 +369,7 @@
       footer_links:    'Enlaces Rápidos',
       footer_contact_title: 'Contacto',
       footer_copy:     'Todos los derechos reservados.',
+      footer_service_region: '📍 Atendemos toda la región',
       form_err_name:   'Por favor ingrese su nombre completo.',
       form_err_phone:  'Por favor ingrese un número de teléfono válido.',
       form_err_email:  'Por favor ingrese un correo electrónico válido.',
@@ -701,7 +712,7 @@
     {
       label: {
         en: 'Built-ins Makeover',
-        es: 'Renovacion de Muebles',
+        es: 'Renovacion de Muebles Empotrados',
         pt: 'Transformacao de Marcenaria'
       },
       caption: {
@@ -710,8 +721,9 @@
         pt: 'Marcenaria Sob Medida - Antes e Depois'
       },
       pairs: [
-        { before: 'befbefore3.jpg', after: 'befafter6dani.jpg' },
+        { before: 'befbefore1dani.jpg', after: 'befafter1dani.jpg' },
         { before: 'befbefore2dani.jpg', after: 'befafter4dani.jpg' },
+        { before: 'befbefore3.jpg', after: 'befafter6dani.jpg' }
       ],
       gallery: [
         { src: 'befbefore1dani.jpg', type: 'before' },
@@ -897,8 +909,9 @@
 
   function loadPair(pi, pai) {
     var pair = projects[pi].pairs[pai];
-    elBefore.style.backgroundImage = 'url(' + pair.before + ')';
-    elAfter.style.backgroundImage  = 'url(' + pair.after  + ')';
+    // Keep "Before" on the left side and "After" on the right side.
+    elBefore.style.backgroundImage = 'url(' + pair.after + ')';
+    elAfter.style.backgroundImage  = 'url(' + pair.before  + ')';
     elCaption.textContent = projects[pi].caption;
     var tot = projects[pi].pairs.length;
     elCounter.textContent = tot > 1 ? (pai + 1) + ' / ' + tot : '';
