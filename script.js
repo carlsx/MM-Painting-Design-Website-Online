@@ -701,7 +701,7 @@
     {
       label: {
         en: 'Built-ins Makeover',
-        es: 'Renovacion de Muebles Empotrados',
+        es: 'Renovacion de Muebles',
         pt: 'Transformacao de Marcenaria'
       },
       caption: {
@@ -710,9 +710,8 @@
         pt: 'Marcenaria Sob Medida - Antes e Depois'
       },
       pairs: [
-        { before: 'befbefore1dani.jpg', after: 'befafter2dani.jpg' },
-        { before: 'befbefore2dani.jpg', after: 'befafter6dani.jpg' },
-        { before: 'befbefore3.jpg', after: 'befafter4dani.jpg' }
+        { before: 'befbefore3dani.jpg', after: 'befafter6dani.jpg' },
+        { before: 'befbefore2dani.jpg', after: 'befafter4dani.jpg' },
       ],
       gallery: [
         { src: 'befbefore1dani.jpg', type: 'before' },
