@@ -86,8 +86,6 @@
       rev1_text:     '"MM Painting transformed our living room and kitchen. Spotless work — they protected everything, left no mess, and the finish is absolutely perfect. Highly recommend."',
       rev2_text:     '"We hired MM for our office repaint. They worked over a weekend so we weren\'t disrupted. Professional, clean, on budget. The walls look brand new. Will use again."',
       rev3_text:     '"The exterior of our house looks incredible. They took their time on the prep, filled in every crack, and the color came out exactly as we envisioned. Worth every penny."',
-      rev4_text:     '"Marlon has been painting my house for many years. He’s an amazing professional. Very knowledgeable and responsible! He has painted my entire house, done lots of details and the latest job was my beautiful library custom build, which his painting brought to life! He is very talented, and I highly recommend his work!"',
-      rev5_text:     '"Good job at reasonable prices. Very fast and reliable."',
       rev_google:    'See Us on Google',
       about_eyebrow: 'About Us',
       about_title:   "Connecticut's Premium Painting Crew",
@@ -210,8 +208,6 @@
       rev1_text:     '"A MM Painting transformou nossa sala e cozinha. Trabalho impecável — protegeram tudo, não deixaram sujeira, e o acabamento está absolutamente perfeito. Super recomendo."',
       rev2_text:     '"Contratei a MM para repintar nosso escritório. Trabalharam no fim de semana para não atrapalhar. Profissionais, limpos, dentro do orçamento. As paredes parecem novas. Voltarei a contratar."',
       rev3_text:     '"O exterior da nossa casa ficou incrível. Foram cuidadosos no preparo, tamparam cada rachadura, e a cor saiu exatamente como imaginamos. Valeu cada centavo."',
-      rev4_text:     '"Marlon pinta a minha casa há muitos anos. Ele é um profissional incrível — muito competente e responsável! Ele pintou a minha casa inteira, cuidou de muitos detalhes e o trabalho mais recente foi a minha linda biblioteca feita sob medida, que a pintura dele fez ganhar vida! Ele é muito talentoso e recomendo fortemente o trabalho dele!"',
-      rev5_text:     '"Bom trabalho e preços razoáveis. Muito rápido e confiável."',
       rev_google:    'Ver no Google',
       about_eyebrow: 'Sobre Nós',
       about_title:   'A Equipe Premium de Pintura de Connecticut',
@@ -334,8 +330,6 @@
       rev1_text:     '"MM Painting transformó nuestra sala y cocina. Trabajo impecable — protegieron todo, no dejaron desorden, y el acabado es absolutamente perfecto. Muy recomendable."',
       rev2_text:     '"Contratamos a MM para repintar nuestra oficina. Trabajaron el fin de semana para no interrumpirnos. Profesionales, limpios, dentro del presupuesto. Las paredes parecen nuevas."',
       rev3_text:     '"El exterior de nuestra casa quedó increíble. Se tomaron su tiempo en la preparación, rellenaron cada grieta, y el color quedó exactamente como lo imaginamos. Valió cada centavo."',
-      rev4_text:     '"Marlon lleva muchos años pintando mi casa. Es un profesional increíble: ¡muy competente y responsable! Ha pintado toda mi casa, se ha encargado de muchísimos detalles y su último trabajo fue mi hermosa biblioteca hecha a medida, ¡a la cual su pintura le dio vida! Es sumamente talentoso y recomiendo encarecidamente su trabajo."',
-      rev5_text:     '"Buen trabajo a precios razonables. Muy rápido y confiable."',
       rev_google:    'Vernos en Google',
       about_eyebrow: 'Sobre Nosotros',
       about_title:   'El Equipo Premium de Pintura de Connecticut',
@@ -392,13 +386,31 @@
   var LANG_CODES  = { en: 'en', pt: 'pt-BR', es: 'es' };
   var LANG_LABELS = { en: 'EN', pt: 'PT',    es: 'ES' };
 
+  function safeStorageGet(key) {
+    try {
+      return window.localStorage ? window.localStorage.getItem(key) : null;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function safeStorageSet(key, value) {
+    try {
+      if (window.localStorage) {
+        window.localStorage.setItem(key, value);
+      }
+    } catch (err) {
+      // Ignore blocked storage modes (e.g. strict privacy/file contexts).
+    }
+  }
+
   function getInitialLang() {
     // 1. URL param
     var params = new URLSearchParams(window.location.search);
     var p = params.get('lang');
     if (p && I18N[p]) return p;
     // 2. localStorage
-    var saved = localStorage.getItem('mm_lang');
+    var saved = safeStorageGet('mm_lang');
     if (saved && I18N[saved]) return saved;
     // 3. Browser language
     var nav = (navigator.language || '').toLowerCase();
@@ -417,7 +429,7 @@
     if (!t) return;
 
     document.documentElement.lang = LANG_CODES[lang] || lang;
-    localStorage.setItem('mm_lang', lang);
+    safeStorageSet('mm_lang', lang);
     currentLang = lang;
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
@@ -713,7 +725,11 @@
     });
   }
   /* ── BEFORE & AFTER SLIDER + GALLERY ── */
-  /* Edit only this list to add/remove projects and image paths */
+  /* Edit only this list to add/remove projects and image paths.
+     You can use:
+     - a single string path: 'my-folder/photo.jpg'
+     - a dynamic list of options: ['path-a.jpg', 'path-b.jpg']
+     The script will pick the first non-empty option automatically. */
   var BA_PROJECTS = [
     {
       label: {
@@ -742,6 +758,46 @@
         { src: 'befafter3dani.jpg', type: 'after' },
         { src: 'befafter5dani.jpg', type: 'after' },
         { src: 'befafter7dani.jpg', type: 'after' }
+      ]
+    },
+    {
+      label: {
+        en: 'Interior Painting',
+        es: 'Pintura Interior',
+        pt: 'Pintura Interna'
+      },
+      caption: {
+        en: 'Interior Painting - Before & After',
+        es: 'Pintura Interior - Antes y Despues',
+        pt: 'Pintura Interna - Antes e Depois'
+      },
+      imageFit: 'contain',
+      pairs: [
+        { before: 'interior-painting/interior-before-01-stair.jpg',       after: 'interior-painting/interior-after-01-stair.jpg' },
+        { before: 'interior-painting/interior-before-02-dining.jpg',      after: 'interior-painting/interior-after-02-dining.jpg' },
+        { before: 'interior-painting/interior-before-03-living-hall.jpg', after: 'interior-painting/interior-after-03-living-hall.jpg' },
+        { before: 'interior-painting/interior-before-04-kitchen.jpg',     after: 'interior-painting/interior-after-04-kitchen.jpg' }
+      ],
+      gallery: [
+        { src: 'interior-painting/interior-before-01-stair.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-01-stair.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-before-02-dining.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-02-dining.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-before-03-living-hall.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-03-living-hall.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-before-04-kitchen.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-04-kitchen.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-before-detail-01.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-detail-01.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-before-detail-02.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-detail-02.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-before-detail-03.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-detail-03.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-before-detail-04.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-detail-04.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-before-detail-05.jpg', type: 'before' },
+        { src: 'interior-painting/interior-after-detail-05.jpg',  type: 'after'  },
+        { src: 'interior-painting/interior-after-detail-06.jpg',  type: 'after'  }
       ]
     }
   ];
@@ -791,8 +847,19 @@
     return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
   }
 
+  function pickDynamicSrc(src) {
+    if (Array.isArray(src)) {
+      for (var i = 0; i < src.length; i++) {
+        var candidate = String(src[i] || '').trim();
+        if (candidate) return candidate;
+      }
+      return '';
+    }
+    return String(src || '').trim();
+  }
+
   function imgOrPlaceholder(src, type, label, idx) {
-    var path = (src || '').trim();
+    var path = pickDynamicSrc(src);
     return path ? path : makePlaceholder(type, label, idx);
   }
 
@@ -864,7 +931,13 @@
   var lbPrev       = document.getElementById('baLbPrev');
   var lbNext       = document.getElementById('baLbNext');
 
-  if (!stage) return;
+  if (
+    !stage ||
+    !elBefore || !elAfter || !divLine || !handle ||
+    !elTabs || !elThumbs || !elCaption || !elCounter ||
+    !galBtn || !overlay || !overlayTitle || !galGrid || !closeOverlay ||
+    !lightbox || !lbImg || !lbInfo || !lbCount || !lbClose || !lbPrev || !lbNext
+  ) return;
 
   function getText(key, fallback) {
     var langMap = I18N[currentLang] || {};
@@ -908,16 +981,26 @@
 
   function setSlider(pct) {
     pct = Math.min(Math.max(pct, 2), 98);
-    elAfter.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    // Keep BEFORE on the left and AFTER on the right.
+    elAfter.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
     divLine.style.left = pct + '%';
     handle.style.left  = pct + '%';
   }
 
   function loadPair(pi, pai) {
     var pair = projects[pi].pairs[pai];
+    var fit = projects[pi].imageFit === 'contain' ? 'contain' : 'cover';
+
+    elBefore.style.backgroundSize = fit;
+    elAfter.style.backgroundSize = fit;
+    elBefore.style.backgroundPosition = 'center center';
+    elAfter.style.backgroundPosition = 'center center';
+    elBefore.style.backgroundRepeat = 'no-repeat';
+    elAfter.style.backgroundRepeat = 'no-repeat';
+
     // Keep "Before" on the left side and "After" on the right side.
-    elBefore.style.backgroundImage = 'url(' + pair.after + ')';
-    elAfter.style.backgroundImage  = 'url(' + pair.before  + ')';
+    elBefore.style.backgroundImage = 'url(' + pair.before + ')';
+    elAfter.style.backgroundImage  = 'url(' + pair.after  + ')';
     elCaption.textContent = projects[pi].caption;
     var tot = projects[pi].pairs.length;
     elCounter.textContent = tot > 1 ? (pai + 1) + ' / ' + tot : '';
@@ -1033,8 +1116,9 @@
 
   function getPct(e) {
     var rect = stage.getBoundingClientRect();
+    var width = rect.width || 1;
     var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
-    return (x / rect.width) * 100;
+    return (x / width) * 100;
   }
 
   handle.addEventListener('mousedown',  function (e) { dragging = true; e.preventDefault(); });
