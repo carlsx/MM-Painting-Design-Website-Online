@@ -782,7 +782,7 @@ button { font-family: inherit; cursor: pointer; }
 .form-group { display: flex; flex-direction: column; gap: 0.38rem; margin-bottom: 1rem; }
 .form-group:last-of-type { margin-bottom: 0; }
 .form-group label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.03em; color: var(--text-dark); }
-.form-group label span { color: var(--red); }
+.form-group label span[aria-hidden="true"] { color: var(--red); }
 .form-group input,
 .form-group textarea {
   padding: 0.72rem 0.95rem;

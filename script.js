@@ -590,6 +590,11 @@
         closeMobileNav(); hamburger.focus();
       }
     });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768 && hamburger.getAttribute('aria-expanded') === 'true') {
+        closeMobileNav();
+      }
+    });
   }
 
   /* ── SMOOTH SCROLL ── */
@@ -805,6 +810,57 @@
         { src: 'interior-after-detail-05.jpg',  type: 'after'  },
         { src: 'interior-after-detail-06.jpg',  type: 'after'  }
       ]
+    },
+    {
+      label: {
+        en: 'Exterior Painting & Washing',
+        es: 'Pintura Exterior y Lavado',
+        pt: 'Pintura Externa e Lavagem'
+      },
+      caption: {
+        en: 'Exterior Painting & Washing - Before & After',
+        es: 'Pintura Exterior y Lavado - Antes y Despues',
+        pt: 'Pintura Externa e Lavagem - Antes e Depois'
+      },
+      imageFit: 'contain',
+      pairs: [
+        { before: 'exterior-painting/exterior-before-01-patio.jpg',              after: 'exterior-painting/exterior-after-01-patio.jpg' },
+        { before: 'exterior-painting/exterior-before-02-deck.jpg',               after: 'exterior-painting/exterior-after-02-deck.jpg' },
+        { before: 'exterior-painting/exterior-before-03-garage-front.jpg',       after: 'exterior-painting/exterior-after-03-garage-front.jpg' },
+        { before: 'exterior-painting/exterior-before-04-garage-angle.jpg',       after: 'exterior-painting/exterior-after-04-garage-angle.jpg' },
+        { before: 'exterior-painting/exterior-before-05-shed-front.jpg',         after: 'exterior-painting/exterior-after-05-shed-front.jpg' },
+        { before: 'exterior-painting/exterior-before-06-rear-wide.jpg',          after: 'exterior-painting/exterior-after-06-rear-wide.jpg' },
+        { before: 'exterior-painting/exterior-before-07-rear-close.jpg',         after: 'exterior-painting/exterior-after-07-rear-close.jpg' },
+        { before: 'exterior-painting/exterior-before-08-side-utility.jpg',       after: 'exterior-painting/exterior-after-08-side-utility.jpg' },
+        { before: 'exterior-painting/exterior-before-09-front-wide.jpg',         after: 'exterior-painting/exterior-after-09-front-wide.jpg' },
+        { before: 'exterior-painting/exterior-before-10-front-wash-process.jpg', after: 'exterior-painting/exterior-after-10-front-angle.jpg' },
+        { before: 'exterior-painting/exterior-before-11-side-shrubs.jpg',        after: 'exterior-painting/exterior-after-11-side-shrubs.jpg' }
+      ],
+      gallery: [
+        { src: 'exterior-painting/exterior-before-01-patio.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-01-patio.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-before-02-deck.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-02-deck.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-before-03-garage-front.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-03-garage-front.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-before-04-garage-angle.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-04-garage-angle.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-before-05-shed-front.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-05-shed-front.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-after-detail-01-shed-side.jpg', type: 'after' },
+        { src: 'exterior-painting/exterior-before-06-rear-wide.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-06-rear-wide.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-before-07-rear-close.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-07-rear-close.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-before-08-side-utility.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-08-side-utility.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-before-09-front-wide.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-09-front-wide.jpg',  type: 'after'  },
+        { src: 'exterior-painting/exterior-before-10-front-wash-process.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-10-front-angle.jpg',         type: 'after'  },
+        { src: 'exterior-painting/exterior-before-11-side-shrubs.jpg', type: 'before' },
+        { src: 'exterior-painting/exterior-after-11-side-shrubs.jpg',  type: 'after'  }
+      ]
     }
   ];
 
@@ -877,6 +933,7 @@
     return base.map(function (project, projectIndex) {
       var label = pickLocalizedValue(project.label, 'Project ' + String(projectIndex + 1));
       var caption = pickLocalizedValue(project.caption, label);
+      var imageFit = project.imageFit === 'contain' ? 'contain' : 'cover';
       var rawPairs = Array.isArray(project.pairs) && project.pairs.length ? project.pairs : [ { before: '', after: '' } ];
 
       var pairs = rawPairs.map(function (pair, pairIndex) {
@@ -907,7 +964,7 @@
         });
       }
 
-      return { label: label, caption: caption, pairs: pairs, gallery: gallery };
+      return { label: label, caption: caption, imageFit: imageFit, pairs: pairs, gallery: gallery };
     });
   }
 
@@ -1119,6 +1176,25 @@
   lbClose.onclick     = function () { lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden', 'true'); };
   lbPrev.onclick      = function () { lbIdx = (lbIdx - 1 + lbImages.length) % lbImages.length; openLightbox(lbIdx); };
   lbNext.onclick      = function () { lbIdx = (lbIdx + 1) % lbImages.length; openLightbox(lbIdx); };
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      if (lightbox.classList.contains('open')) {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      } else if (overlay.classList.contains('open')) {
+        closeGallery();
+      }
+      return;
+    }
+    if (!lightbox.classList.contains('open') || !lbImages.length) return;
+    if (e.key === 'ArrowLeft') {
+      lbIdx = (lbIdx - 1 + lbImages.length) % lbImages.length;
+      openLightbox(lbIdx);
+    } else if (e.key === 'ArrowRight') {
+      lbIdx = (lbIdx + 1) % lbImages.length;
+      openLightbox(lbIdx);
+    }
+  });
 
   function getPct(e) {
     var rect = stage.getBoundingClientRect();
