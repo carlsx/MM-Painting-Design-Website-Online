@@ -67,7 +67,7 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#D12B2B" stroke-width="2"/><path d="M12 8v4l3 3" stroke="#D12B2B" stroke-width="2" stroke-linecap="round"/></svg>
       <span data-i18n="notif_text">Now booking: next 2–3 weeks — <strong>Slots filling fast.</strong> Call or text for your free estimate.</span>
     </span>
-    <button class="notif-close" aria-label="Close notification" onclick="this.closest('.notif-bar').remove();document.documentElement.style.setProperty('--notif-h','0px')">×</button>
+    <button type="button" class="notif-close" aria-label="Close notification" onclick="this.closest('.notif-bar').remove();document.documentElement.style.setProperty('--notif-h','0px')">×</button>
   </div>
 
   <!-- ===== STICKY HEADER ===== -->
@@ -92,7 +92,7 @@
 
         <!-- LANGUAGE SWITCHER (desktop) -->
         <div class="lang-switcher" id="langSwitcher" role="navigation" aria-label="Language selector">
-          <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+          <button type="button" class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
             <span class="lang-current" id="langCurrent">EN</span>
             <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -111,7 +111,7 @@
       <div class="header-right-mobile">
         <!-- LANGUAGE SWITCHER (mobile header) -->
         <div class="lang-switcher lang-switcher-mobile" id="langSwitcherMobile" role="navigation" aria-label="Language selector">
-          <button class="lang-btn" id="langBtnMobile" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+          <button type="button" class="lang-btn" id="langBtnMobile" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
             <span class="lang-current" id="langCurrentMobile">EN</span>
           </button>
@@ -122,7 +122,7 @@
           </ul>
         </div>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavOverlay">
+        <button type="button" class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNavOverlay">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -409,7 +409,7 @@
       <p class="ba-caption-text" id="baCaption"></p>
 
       <div class="ba-gallery-btn-wrap">
-        <button class="ba-gallery-btn" id="baGalBtn" aria-expanded="false">
+        <button type="button" class="ba-gallery-btn" id="baGalBtn" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
             <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
             <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
@@ -421,7 +421,7 @@
       <div class="ba-overlay" id="baOverlay" aria-hidden="true">
         <div class="ba-overlay-header">
           <span class="ba-overlay-title" id="baOverlayTitle"></span>
-          <button class="ba-close-btn" id="baCloseOverlay" aria-label="Close gallery">
+          <button type="button" class="ba-close-btn" id="baCloseOverlay" aria-label="Close gallery">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
               <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
             </svg>
@@ -434,15 +434,15 @@
       <div class="ba-lightbox" id="baLightbox" aria-hidden="true">
         <div class="ba-lb-top">
           <span class="ba-lb-info" id="baLbInfo"></span>
-          <button class="ba-lb-close" id="baLbClose" data-i18n="ba_gallery_close">Close</button>
+          <button type="button" class="ba-lb-close" id="baLbClose" data-i18n="ba_gallery_close">Close</button>
         </div>
         <img class="ba-lb-img" id="baLbImg" src="" alt="" />
         <div class="ba-lb-nav">
-          <button class="ba-lb-arrow" id="baLbPrev" aria-label="Previous photo">
+          <button type="button" class="ba-lb-arrow" id="baLbPrev" aria-label="Previous photo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
           <span class="ba-lb-info" id="baLbCount"></span>
-          <button class="ba-lb-arrow" id="baLbNext" aria-label="Next photo">
+          <button type="button" class="ba-lb-arrow" id="baLbNext" aria-label="Next photo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
@@ -716,9 +716,9 @@
         <p>Danbury, CT 06810</p>
         <p class="footer-hours" data-i18n="contact_hours">Mon–Fri 8am–6pm &bull; Sat 8am–2pm</p>
         <!-- Google link in footer -->
-        <p style="margin-top:0.75rem;">
+        <p class="footer-google-wrap">
           <a href="https://share.google/INIhjZpQSnfq2EuzM" target="_blank" rel="noopener noreferrer" class="footer-google-link" aria-label="See MM Painting on Google">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display:inline;vertical-align:middle;margin-right:0.3rem;" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <svg class="footer-google-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             Google Reviews
           </a>
         </p>
@@ -733,7 +733,7 @@
   </footer>
 
   <!-- BACK TO TOP -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top of page" hidden>
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top of page" hidden>
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polyline points="18 15 12 9 6 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 

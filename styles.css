@@ -826,6 +826,8 @@ button { font-family: inherit; cursor: pointer; }
 .footer-contact a { color: rgba(255,255,255,0.6); transition: color var(--t); }
 .footer-contact a:hover { color: var(--white); }
 .footer-hours { font-size: 0.76rem; color: rgba(255,255,255,0.36) !important; margin-top: 0.2rem; }
+.footer-google-wrap { margin-top: 0.75rem; }
+.footer-google-icon { display: inline; vertical-align: middle; margin-right: 0.3rem; }
 .footer-bottom { padding: 1.1rem 0; background: rgba(0,0,0,.2); }
 .footer-bottom-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
 .footer-bottom p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
