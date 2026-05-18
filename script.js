@@ -738,8 +738,8 @@
   /* ── BEFORE & AFTER SLIDER + GALLERY ── */
   /* Edit only this list to add/remove projects and image paths.
      You can use:
-     - a single string path: 'my-folder/photo.jpg'
-     - a dynamic list of options: ['path-a.jpg', 'path-b.jpg']
+     - a single string path
+     - a dynamic list of options (first non-empty wins)
      The script will pick the first non-empty option automatically. */
   var BA_PROJECTS = [
     {
@@ -860,6 +860,70 @@
         { src: 'after9.jpg',   type: 'after'  },
         { src: 'before9.jpg',  type: 'before' },
         { src: 'after6.jpg',   type: 'after'  }
+      ]
+    },
+    {
+      label: {
+        en: 'Exterior Painting - Ridgefield (Chris)',
+        es: 'Pintura Exterior - Ridgefield (Chris)',
+        pt: 'Pintura Externa - Ridgefield (Chris)'
+      },
+      caption: {
+        en: 'Chris Iorillo - Exterior Painting - Before & After',
+        es: 'Chris Iorillo - Pintura Exterior - Antes y Despues',
+        pt: 'Chris Iorillo - Pintura Externa - Antes e Depois'
+      },
+      imageFit: 'contain',
+      pairs: [
+        { before: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-07.jpg', after: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-01.jpg' },
+        { before: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-05.jpg', after: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-02.jpg' },
+        { before: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-03.jpg', after: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-03.jpg' }
+      ],
+      gallery: [
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-07.jpg', type: 'before' },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-01.jpg',  type: 'after'  },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-05.jpg', type: 'before' },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-02.jpg',  type: 'after'  },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-03.jpg', type: 'before' },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-03.jpg',  type: 'after'  },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-01.jpg', type: 'before' },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-02.jpg', type: 'before' },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-04.jpg', type: 'before' },
+        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-06.jpg', type: 'before' }
+      ]
+    },
+    {
+      label: {
+        en: 'Exterior Painting - Redding (Terry)',
+        es: 'Pintura Exterior - Redding (Terry)',
+        pt: 'Pintura Externa - Redding (Terry)'
+      },
+      caption: {
+        en: 'Terry - Exterior Painting - Before & After',
+        es: 'Terry - Pintura Exterior - Antes y Despues',
+        pt: 'Terry - Pintura Externa - Antes e Depois'
+      },
+      imageFit: 'contain',
+      pairs: [
+        { before: 'exterior-painting/redding-terry/terry-redding-before-01.jpg', after: 'exterior-painting/redding-terry/terry-redding-after-08.jpg' },
+        { before: 'exterior-painting/redding-terry/terry-redding-before-02.jpg', after: 'exterior-painting/redding-terry/terry-redding-after-03.jpg' },
+        { before: 'exterior-painting/redding-terry/terry-redding-before-03.jpg', after: 'exterior-painting/redding-terry/terry-redding-after-01.jpg' },
+        { before: 'exterior-painting/redding-terry/terry-redding-before-04.jpg', after: 'exterior-painting/redding-terry/terry-redding-after-04.jpg' }
+      ],
+      gallery: [
+        { src: 'exterior-painting/redding-terry/terry-redding-before-01.jpg', type: 'before' },
+        { src: 'exterior-painting/redding-terry/terry-redding-after-08.jpg',  type: 'after'  },
+        { src: 'exterior-painting/redding-terry/terry-redding-before-02.jpg', type: 'before' },
+        { src: 'exterior-painting/redding-terry/terry-redding-after-03.jpg',  type: 'after'  },
+        { src: 'exterior-painting/redding-terry/terry-redding-before-03.jpg', type: 'before' },
+        { src: 'exterior-painting/redding-terry/terry-redding-after-01.jpg',  type: 'after'  },
+        { src: 'exterior-painting/redding-terry/terry-redding-before-04.jpg', type: 'before' },
+        { src: 'exterior-painting/redding-terry/terry-redding-after-04.jpg',  type: 'after'  },
+        { src: 'exterior-painting/redding-terry/terry-redding-before-05.jpg', type: 'before' },
+        { src: 'exterior-painting/redding-terry/terry-redding-after-02.jpg',  type: 'after'  },
+        { src: 'exterior-painting/redding-terry/terry-redding-after-05.jpg',  type: 'after'  },
+        { src: 'exterior-painting/redding-terry/terry-redding-after-06.jpg',  type: 'after'  },
+        { src: 'exterior-painting/redding-terry/terry-redding-after-07.jpg',  type: 'after'  }
       ]
     }
   ];
