@@ -875,21 +875,21 @@
       },
       imageFit: 'contain',
       pairs: [
-        { before: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-07.jpg', after: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-01.jpg' },
-        { before: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-05.jpg', after: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-02.jpg' },
-        { before: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-03.jpg', after: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-03.jpg' }
+        { before: 'Chris Iorillo Before - 1.jpg', after: 'Chris Iorillo after - 1 .heic' },
+        { before: 'Chris Iorillo Before - 2.jpg', after: 'Chris Iorillo after - 2.PNG' },
+        { before: 'Chris Iorillo Before - 3.jpg', after: 'Chris Iorillo after - 3.PNG' }
       ],
       gallery: [
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-07.jpg', type: 'before' },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-01.jpg',  type: 'after'  },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-05.jpg', type: 'before' },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-02.jpg',  type: 'after'  },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-03.jpg', type: 'before' },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-after-03.jpg',  type: 'after'  },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-01.jpg', type: 'before' },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-02.jpg', type: 'before' },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-04.jpg', type: 'before' },
-        { src: 'exterior-painting/ridgefield-chris/chris-ridgefield-before-06.jpg', type: 'before' }
+        { src: 'Chris Iorillo Before - 1.jpg', type: 'before' },
+        { src: 'Chris Iorillo after - 1 .heic', type: 'after' },
+        { src: 'Chris Iorillo Before - 2.jpg', type: 'before' },
+        { src: 'Chris Iorillo after - 2.PNG', type: 'after' },
+        { src: 'Chris Iorillo Before - 3.jpg', type: 'before' },
+        { src: 'Chris Iorillo after - 3.PNG', type: 'after' },
+        { src: 'Chris Iorillo Before - 4.jpg', type: 'before' },
+        { src: 'Chris Iorillo before - 5.jpg', type: 'before' },
+        { src: 'Chris Iorillo before - 6.jpg', type: 'before' },
+        { src: 'Chris Iorillo before - 7.PNG', type: 'before' }
       ]
     },
     {
@@ -905,25 +905,25 @@
       },
       imageFit: 'contain',
       pairs: [
-        { before: 'exterior-painting/redding-terry/terry-redding-before-01.jpg', after: 'exterior-painting/redding-terry/terry-redding-after-08.jpg' },
-        { before: 'exterior-painting/redding-terry/terry-redding-before-02.jpg', after: 'exterior-painting/redding-terry/terry-redding-after-03.jpg' },
-        { before: 'exterior-painting/redding-terry/terry-redding-before-03.jpg', after: 'exterior-painting/redding-terry/terry-redding-after-01.jpg' },
-        { before: 'exterior-painting/redding-terry/terry-redding-before-04.jpg', after: 'exterior-painting/redding-terry/terry-redding-after-04.jpg' }
+        { before: 'Terry before - 1.jpg', after: 'Terry after - 1.jpg' },
+        { before: 'Terry before - 2.jpg', after: 'Terry after - 2.jpg' },
+        { before: 'Terry before - 3.jpg', after: 'Terry after - 3.jpg' },
+        { before: 'Terry before - 4.jpg', after: 'Terry after - 4.jpg' }
       ],
       gallery: [
-        { src: 'exterior-painting/redding-terry/terry-redding-before-01.jpg', type: 'before' },
-        { src: 'exterior-painting/redding-terry/terry-redding-after-08.jpg',  type: 'after'  },
-        { src: 'exterior-painting/redding-terry/terry-redding-before-02.jpg', type: 'before' },
-        { src: 'exterior-painting/redding-terry/terry-redding-after-03.jpg',  type: 'after'  },
-        { src: 'exterior-painting/redding-terry/terry-redding-before-03.jpg', type: 'before' },
-        { src: 'exterior-painting/redding-terry/terry-redding-after-01.jpg',  type: 'after'  },
-        { src: 'exterior-painting/redding-terry/terry-redding-before-04.jpg', type: 'before' },
-        { src: 'exterior-painting/redding-terry/terry-redding-after-04.jpg',  type: 'after'  },
-        { src: 'exterior-painting/redding-terry/terry-redding-before-05.jpg', type: 'before' },
-        { src: 'exterior-painting/redding-terry/terry-redding-after-02.jpg',  type: 'after'  },
-        { src: 'exterior-painting/redding-terry/terry-redding-after-05.jpg',  type: 'after'  },
-        { src: 'exterior-painting/redding-terry/terry-redding-after-06.jpg',  type: 'after'  },
-        { src: 'exterior-painting/redding-terry/terry-redding-after-07.jpg',  type: 'after'  }
+        { src: 'Terry before - 1.jpg', type: 'before' },
+        { src: 'Terry after - 1.jpg', type: 'after' },
+        { src: 'Terry before - 2.jpg', type: 'before' },
+        { src: 'Terry after - 2.jpg', type: 'after' },
+        { src: 'Terry before - 3.jpg', type: 'before' },
+        { src: 'Terry after - 3.jpg', type: 'after' },
+        { src: 'Terry before - 4.jpg', type: 'before' },
+        { src: 'Terry after - 4.jpg', type: 'after' },
+        { src: 'Terry before - 5.jpg', type: 'before' },
+        { src: 'Terry after - 5.jpg', type: 'after' },
+        { src: 'Terry after - 6.jpg', type: 'after' },
+        { src: 'Terry after - 7.jpg', type: 'after' },
+        { src: 'Terry after - 8.jpg', type: 'after' }
       ]
     }
   ];
