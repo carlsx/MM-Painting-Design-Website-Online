@@ -896,9 +896,9 @@
         pt: 'Pintura Externa - Ridgefield (Chris)'
       },
       caption: {
-        en: 'Chris Iorillo - Exterior Painting - Before & After',
-        es: 'Chris Iorillo - Pintura Exterior - Antes y Despues',
-        pt: 'Chris Iorillo - Pintura Externa - Antes e Depois'
+        en: 'Exterior Painting - Before & After',
+        es: 'Pintura Exterior - Antes y Despues',
+        pt: 'Pintura Externa - Antes e Depois'
       },
       imageFit: 'contain',
       pairs: [
@@ -921,14 +921,14 @@
     },
     {
       label: {
-        en: 'Exterior Painting - Redding (Terry)',
-        es: 'Pintura Exterior - Redding (Terry)',
-        pt: 'Pintura Externa - Redding (Terry)'
+        en: 'Exterior Painting - Redding',
+        es: 'Pintura Exterior - Redding',
+        pt: 'Pintura Externa - Redding'
       },
       caption: {
-        en: 'Terry - Exterior Painting - Before & After',
-        es: 'Terry - Pintura Exterior - Antes y Despues',
-        pt: 'Terry - Pintura Externa - Antes e Depois'
+        en: 'Exterior Painting - Before & After',
+        es: 'Pintura Exterior - Antes y Despues',
+        pt: 'Pintura Externa - Antes e Depois'
       },
       imageFit: 'contain',
       pairs: [
@@ -955,14 +955,14 @@
     },
     {
       label: {
-        en: 'Deck Project (Brandon)',
-        es: 'Proyecto de Deck (Brandon)',
-        pt: 'Projeto de Deck (Brandon)'
+        en: 'Deck Project',
+        es: 'Proyecto de Deck',
+        pt: 'Projeto de Deck'
       },
       caption: {
-        en: 'Brandon - Deck Project - Before & After',
-        es: 'Brandon - Proyecto de Deck - Antes y Despues',
-        pt: 'Brandon - Projeto de Deck - Antes e Depois'
+        en: 'Deck Project - Before & After',
+        es: 'Proyecto de Deck - Antes y Despues',
+        pt: 'Projeto de Deck - Antes e Depois'
       },
       imageFit: 'contain',
       pairs: [
@@ -975,19 +975,18 @@
     },
     {
       label: {
-        en: 'Deck Project (Marina)',
-        es: 'Proyecto de Deck (Marina)',
-        pt: 'Projeto de Deck (Marina)'
+        en: 'Deck Project',
+        es: 'Proyecto de Deck',
+        pt: 'Projeto de Deck'
       },
       caption: {
-        en: 'Marina - Deck Project - Before & After',
-        es: 'Marina - Proyecto de Deck - Antes y Despues',
-        pt: 'Marina - Projeto de Deck - Antes e Depois'
+        en: 'Deck Project - Before & After',
+        es: 'Proyecto de Deck - Antes y Despues',
+        pt: 'Projeto de Deck - Antes e Depois'
       },
       imageFit: 'contain',
       pairs: [
-        { before: 'deckmarinabefore1.jpg', after: 'deckmarinaafter.jpg' },
-        { before: 'deckmarinabefore2.jpg', after: 'deckmarinaafter2.jpg' }
+        { before: 'deckmarinabefore.jpg', after: 'deckmarinaafter.jpg' }
       ],
       gallery: [
         { src: 'deckmarinabefore1.jpg', type: 'before' },
@@ -1011,9 +1010,7 @@
       },
       imageFit: 'contain',
       pairs: [
-        { before: 'Barbarabefore.jpg', after: 'Barbaraafter.jpg' },
-        { before: 'Barbarabefore2.jpg', after: 'Barbaraafter2.jpg' },
-        { before: 'Barbarabefore3.jpg', after: 'Barbaraafter3.jpg' }
+        { before: 'Barbarabefore2.jpg', after: 'Barbaraafter.jpg' }
       ],
       gallery: [
         { src: 'Barbarabefore.jpg', type: 'before' },
