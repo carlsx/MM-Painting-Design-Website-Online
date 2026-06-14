@@ -64,6 +64,15 @@
       why5_desc:     'We use Benjamin Moore, Sherwin-Williams, and other top-grade coatings.',
       why6_title:    'Respect for Your Space',
       why6_desc:     'We treat your home or business like our own. Clean jobsite, every day.',
+      lead_eyebrow:  'Lead-Safe Certified',
+      lead_title:    'EPA Lead-Safe Certified Firm',
+      lead_p1:       'For homes built before 1978, proper preparation matters. MM Painting & Design follows EPA lead-safe practices designed to reduce dust and protect the work area.',
+      lead_p2:       'That means careful containment, cleanup, and a safer process when we are working around your family, tenants, or customers.',
+      lead_cert:     'Certification ID: NAT-F335606-1',
+      lead_point1:   'Lead-safe work practices for older homes',
+      lead_point2:   'Careful containment, prep, and cleanup',
+      lead_point3:   'A cleaner, safer process from start to finish',
+      lead_cta:      'Ask About Lead-Safe Prep',
       gal_eyebrow:   'Our Work',
       gal_title:     'Finished Projects',
       gal_sub:       'Every project reflects our commitment to a flawless result.',
@@ -188,6 +197,15 @@
       why5_desc:     'Usamos Benjamin Moore, Sherwin-Williams e outras tintas premium.',
       why6_title:    'Respeito pelo Seu Espaço',
       why6_desc:     'Tratamos sua casa ou empresa como se fosse nossa. Obra limpa todos os dias.',
+      lead_eyebrow:  'Certificação Lead-Safe',
+      lead_title:    'Empresa Certificada EPA Lead-Safe',
+      lead_p1:       'Em casas construídas antes de 1978, a preparação correta faz toda a diferença. A MM Painting & Design segue práticas EPA Lead-Safe para reduzir poeira e proteger a área de trabalho.',
+      lead_p2:       'Isso significa contenção cuidadosa, limpeza adequada e um processo mais seguro quando estamos trabalhando perto da sua família, inquilinos ou clientes.',
+      lead_cert:     'Certificação: NAT-F335606-1',
+      lead_point1:   'Práticas lead-safe para casas antigas',
+      lead_point2:   'Contenção, preparação e limpeza cuidadosas',
+      lead_point3:   'Um processo mais limpo e seguro do início ao fim',
+      lead_cta:      'Pergunte Sobre o Preparo Lead-Safe',
       gal_eyebrow:   'Nossos Trabalhos',
       gal_title:     'Projetos Concluídos',
       gal_sub:       'Cada projeto reflete nosso compromisso com um resultado impecável.',
@@ -312,6 +330,15 @@
       why5_desc:     'Usamos Benjamin Moore, Sherwin-Williams y otras marcas premium.',
       why6_title:    'Respeto por Su Espacio',
       why6_desc:     'Tratamos su hogar o negocio como el nuestro. Obra limpia todos los días.',
+      lead_eyebrow:  'Certificación Lead-Safe',
+      lead_title:    'Empresa Certificada EPA Lead-Safe',
+      lead_p1:       'En casas construidas antes de 1978, la preparación correcta es clave. MM Painting & Design sigue prácticas EPA Lead-Safe diseñadas para reducir el polvo y proteger el área de trabajo.',
+      lead_p2:       'Eso significa contención cuidadosa, limpieza adecuada y un proceso más seguro cuando trabajamos cerca de su familia, inquilinos o clientes.',
+      lead_cert:     'Certificación: NAT-F335606-1',
+      lead_point1:   'Prácticas lead-safe para casas antiguas',
+      lead_point2:   'Contención, preparación y limpieza cuidadosas',
+      lead_point3:   'Un proceso más limpio y seguro de principio a fin',
+      lead_cta:      'Pregunte por la Preparación Lead-Safe',
       gal_eyebrow:   'Nuestros Trabajos',
       gal_title:     'Proyectos Terminados',
       gal_sub:       'Cada proyecto refleja nuestro compromiso con un resultado impecable.',
@@ -875,13 +902,13 @@
       },
       imageFit: 'contain',
       pairs: [
-        { before: 'Chris Iorillo Before - 1.jpg', after: 'Chris Iorillo after - 1 .heic' },
+        { before: 'Chris Iorillo Before - 1.jpg', after: 'Chris Iorillo after - 1 .jpg' },
         { before: 'Chris Iorillo Before - 2.jpg', after: 'Chris Iorillo after - 2.PNG' },
         { before: 'Chris Iorillo Before - 3.jpg', after: 'Chris Iorillo after - 3.PNG' }
       ],
       gallery: [
         { src: 'Chris Iorillo Before - 1.jpg', type: 'before' },
-        { src: 'Chris Iorillo after - 1 .heic', type: 'after' },
+        { src: 'Chris Iorillo after - 1 .jpg', type: 'after' },
         { src: 'Chris Iorillo Before - 2.jpg', type: 'before' },
         { src: 'Chris Iorillo after - 2.PNG', type: 'after' },
         { src: 'Chris Iorillo Before - 3.jpg', type: 'before' },
@@ -924,6 +951,77 @@
         { src: 'Terry after - 6.jpg', type: 'after' },
         { src: 'Terry after - 7.jpg', type: 'after' },
         { src: 'Terry after - 8.jpg', type: 'after' }
+      ]
+    },
+    {
+      label: {
+        en: 'Deck Project (Brandon)',
+        es: 'Proyecto de Deck (Brandon)',
+        pt: 'Projeto de Deck (Brandon)'
+      },
+      caption: {
+        en: 'Brandon - Deck Project - Before & After',
+        es: 'Brandon - Proyecto de Deck - Antes y Despues',
+        pt: 'Brandon - Projeto de Deck - Antes e Depois'
+      },
+      imageFit: 'contain',
+      pairs: [
+        { before: 'deckbrandonbefore.PNG', after: 'deckbrandon.jpeg' }
+      ],
+      gallery: [
+        { src: 'deckbrandonbefore.PNG', type: 'before' },
+        { src: 'deckbrandon.jpeg', type: 'after' }
+      ]
+    },
+    {
+      label: {
+        en: 'Deck Project (Marina)',
+        es: 'Proyecto de Deck (Marina)',
+        pt: 'Projeto de Deck (Marina)'
+      },
+      caption: {
+        en: 'Marina - Deck Project - Before & After',
+        es: 'Marina - Proyecto de Deck - Antes y Despues',
+        pt: 'Marina - Projeto de Deck - Antes e Depois'
+      },
+      imageFit: 'contain',
+      pairs: [
+        { before: 'deckmarinabefore1.jpg', after: 'deckmarinaafter.jpg' },
+        { before: 'deckmarinabefore2.jpg', after: 'deckmarinaafter2.jpg' }
+      ],
+      gallery: [
+        { src: 'deckmarinabefore1.jpg', type: 'before' },
+        { src: 'deckmarinaafter.jpg', type: 'after' },
+        { src: 'deckmarinabefore2.jpg', type: 'before' },
+        { src: 'deckmarinaafter2.jpg', type: 'after' },
+        { src: 'deckmarinabefore3.jpg', type: 'before' },
+        { src: 'deckmarinabefore.jpg', type: 'before' }
+      ]
+    },
+    {
+      label: {
+        en: 'Interior Hallway (Danbury)',
+        es: 'Hall Interior (Danbury)',
+        pt: 'Hall Interior (Danbury)'
+      },
+      caption: {
+        en: 'Danbury - Interior Hallway Painting - Before & After',
+        es: 'Danbury - Pintura Interior del Hall - Antes y Despues',
+        pt: 'Danbury - Pintura Interior do Hall - Antes e Depois'
+      },
+      imageFit: 'contain',
+      pairs: [
+        { before: 'Barbarabefore.jpg', after: 'Barbaraafter.jpg' },
+        { before: 'Barbarabefore2.jpg', after: 'Barbaraafter2.jpg' },
+        { before: 'Barbarabefore3.jpg', after: 'Barbaraafter3.jpg' }
+      ],
+      gallery: [
+        { src: 'Barbarabefore.jpg', type: 'before' },
+        { src: 'Barbaraafter.jpg', type: 'after' },
+        { src: 'Barbarabefore2.jpg', type: 'before' },
+        { src: 'Barbaraafter2.jpg', type: 'after' },
+        { src: 'Barbarabefore3.jpg', type: 'before' },
+        { src: 'Barbaraafter3.jpg', type: 'after' }
       ]
     }
   ];
@@ -1126,8 +1224,9 @@
     elAfter.style.backgroundRepeat = 'no-repeat';
 
     // Keep "Before" on the left side and "After" on the right side.
-    elBefore.style.backgroundImage = 'url(' + pair.before + ')';
-    elAfter.style.backgroundImage  = 'url(' + pair.after  + ')';
+    // Wrap URLs in quotes so filenames with spaces/special chars keep working.
+    elBefore.style.backgroundImage = 'url("' + encodeURI(pair.before).replace(/"/g, '%22') + '")';
+    elAfter.style.backgroundImage  = 'url("' + encodeURI(pair.after).replace(/"/g, '%22') + '")';
     elCaption.textContent = projects[pi].caption;
     var tot = projects[pi].pairs.length;
     elCounter.textContent = tot > 1 ? (pai + 1) + ' / ' + tot : '';
