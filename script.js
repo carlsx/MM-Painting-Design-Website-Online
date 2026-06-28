@@ -97,6 +97,7 @@
       rev3_text:     '"The exterior of our house looks incredible. They took their time on the prep, filled in every crack, and the color came out exactly as we envisioned. Worth every penny."',
       rev4_text:     '"Marlon has been painting my house for many years. He’s an amazing professional. Very knowledgeable and responsible! He has painted my entire house, done lots of details and the latest job was my beautiful library custom build, which his painting brought to life! He is very talented, and I highly recommend his work!"',
       rev5_text:     '"Good job at reasonable prices. Very fast and reliable."',
+      rev6_text:     '"First of all, they have a wide range of color selections. But their ability to take a photograph of the house and turn it into a realistic representation of what the finished house would look like helped us visualize and got rid of any doubts or concerns about the colors we chose. We also had to have some additional carpentry work done on the house. They took an old house and made it look brand new, all while keeping their rates reasonable. They were timely, precise, and clean. The work they did was truly transformative and we are very happy with our “new” house!"',
       rev_google:    'See Us on Google',
       about_eyebrow: 'About Us',
       about_title:   "Connecticut's Premium Painting Crew",
@@ -230,6 +231,7 @@
       rev3_text:     '"O exterior da nossa casa ficou incrível. Foram cuidadosos no preparo, tamparam cada rachadura, e a cor saiu exatamente como imaginamos. Valeu cada centavo."',
       rev4_text:     '"Marlon pinta a minha casa há muitos anos. Ele é um profissional incrível — muito competente e responsável! Ele pintou a minha casa inteira, cuidou de muitos detalhes e o trabalho mais recente foi a minha linda biblioteca feita sob medida, que a pintura dele fez ganhar vida! Ele é muito talentoso e recomendo fortemente o trabalho dele!"',
       rev5_text:     '"Bom trabalho e preços razoáveis. Muito rápido e confiável."',
+      rev6_text:     '"Antes de tudo, eles têm uma grande variedade de opções de cores. Mas a capacidade de pegar uma fotografia da casa e transformá-la em uma representação realista de como ela ficaria pronta nos ajudou a visualizar o resultado e tirou qualquer dúvida ou preocupação sobre as cores escolhidas. Também precisávamos de alguns trabalhos extras de carpintaria na casa. Eles pegaram uma casa antiga e fizeram parecer nova em folha, tudo isso mantendo preços razoáveis. Foram pontuais, precisos e limpos. O trabalho foi realmente transformador e estamos muito felizes com a nossa “nova” casa!"',
       rev_google:    'Ver no Google',
       about_eyebrow: 'Sobre Nós',
       about_title:   'A Equipe Premium de Pintura de Connecticut',
@@ -363,6 +365,7 @@
       rev3_text:     '"El exterior de nuestra casa quedó increíble. Se tomaron su tiempo en la preparación, rellenaron cada grieta, y el color quedó exactamente como lo imaginamos. Valió cada centavo."',
       rev4_text:     '"Marlon lleva muchos años pintando mi casa. Es un profesional increíble: ¡muy competente y responsable! Ha pintado toda mi casa, se ha encargado de muchísimos detalles y su último trabajo fue mi hermosa biblioteca hecha a medida, ¡a la cual su pintura le dio vida! Es sumamente talentoso y recomiendo encarecidamente su trabajo."',
       rev5_text:     '"Buen trabajo a precios razonables. Muy rápido y confiable."',
+      rev6_text:     '"Antes que nada, tienen una gran variedad de opciones de color. Pero su capacidad de tomar una fotografía de la casa y convertirla en una representación realista de cómo se vería terminada nos ayudó a visualizar el resultado y eliminó cualquier duda o preocupación sobre los colores que elegimos. También tuvimos que hacer algunos trabajos adicionales de carpintería en la casa. Tomaron una casa vieja y la hicieron parecer completamente nueva, todo manteniendo tarifas razonables. Fueron puntuales, precisos y limpios. El trabajo que hicieron fue verdaderamente transformador y estamos muy felices con nuestra “nueva” casa!"',
       rev_google:    'Vernos en Google',
       about_eyebrow: 'Sobre Nosotros',
       about_title:   'El Equipo Premium de Pintura de Connecticut',
@@ -896,9 +899,9 @@
         pt: 'Pintura Externa - Ridgefield (Chris)'
       },
       caption: {
-        en: 'Exterior Painting - Before & After',
-        es: 'Pintura Exterior - Antes y Despues',
-        pt: 'Pintura Externa - Antes e Depois'
+        en: 'Chris Iorillo - Exterior Painting - Before & After',
+        es: 'Chris Iorillo - Pintura Exterior - Antes y Despues',
+        pt: 'Chris Iorillo - Pintura Externa - Antes e Depois'
       },
       imageFit: 'contain',
       pairs: [
@@ -921,14 +924,14 @@
     },
     {
       label: {
-        en: 'Exterior Painting - Redding',
-        es: 'Pintura Exterior - Redding',
-        pt: 'Pintura Externa - Redding'
+        en: 'Exterior Painting - Redding (Terry)',
+        es: 'Pintura Exterior - Redding (Terry)',
+        pt: 'Pintura Externa - Redding (Terry)'
       },
       caption: {
-        en: 'Exterior Painting - Before & After',
-        es: 'Pintura Exterior - Antes y Despues',
-        pt: 'Pintura Externa - Antes e Depois'
+        en: 'Terry - Exterior Painting - Before & After',
+        es: 'Terry - Pintura Exterior - Antes y Despues',
+        pt: 'Terry - Pintura Externa - Antes e Depois'
       },
       imageFit: 'contain',
       pairs: [
@@ -955,14 +958,14 @@
     },
     {
       label: {
-        en: 'Deck Project',
-        es: 'Proyecto de Deck',
-        pt: 'Projeto de Deck'
+        en: 'Deck Project (Brandon)',
+        es: 'Proyecto de Deck (Brandon)',
+        pt: 'Projeto de Deck (Brandon)'
       },
       caption: {
-        en: 'Deck Project - Before & After',
-        es: 'Proyecto de Deck - Antes y Despues',
-        pt: 'Projeto de Deck - Antes e Depois'
+        en: 'Brandon - Deck Project - Before & After',
+        es: 'Brandon - Proyecto de Deck - Antes y Despues',
+        pt: 'Brandon - Projeto de Deck - Antes e Depois'
       },
       imageFit: 'contain',
       pairs: [
@@ -975,18 +978,19 @@
     },
     {
       label: {
-        en: 'Deck Project',
-        es: 'Proyecto de Deck',
-        pt: 'Projeto de Deck'
+        en: 'Deck Project (Marina)',
+        es: 'Proyecto de Deck (Marina)',
+        pt: 'Projeto de Deck (Marina)'
       },
       caption: {
-        en: 'Deck Project - Before & After',
-        es: 'Proyecto de Deck - Antes y Despues',
-        pt: 'Projeto de Deck - Antes e Depois'
+        en: 'Marina - Deck Project - Before & After',
+        es: 'Marina - Proyecto de Deck - Antes y Despues',
+        pt: 'Marina - Projeto de Deck - Antes e Depois'
       },
       imageFit: 'contain',
       pairs: [
-        { before: 'deckmarinabefore.jpg', after: 'deckmarinaafter.jpg' }
+        { before: 'deckmarinabefore1.jpg', after: 'deckmarinaafter.jpg' },
+        { before: 'deckmarinabefore2.jpg', after: 'deckmarinaafter2.jpg' }
       ],
       gallery: [
         { src: 'deckmarinabefore1.jpg', type: 'before' },
@@ -1010,7 +1014,9 @@
       },
       imageFit: 'contain',
       pairs: [
-        { before: 'Barbarabefore2.jpg', after: 'Barbaraafter.jpg' }
+        { before: 'Barbarabefore.jpg', after: 'Barbaraafter.jpg' },
+        { before: 'Barbarabefore2.jpg', after: 'Barbaraafter2.jpg' },
+        { before: 'Barbarabefore3.jpg', after: 'Barbaraafter3.jpg' }
       ],
       gallery: [
         { src: 'Barbarabefore.jpg', type: 'before' },
@@ -1019,6 +1025,30 @@
         { src: 'Barbaraafter2.jpg', type: 'after' },
         { src: 'Barbarabefore3.jpg', type: 'before' },
         { src: 'Barbaraafter3.jpg', type: 'after' }
+      ]
+    },
+    {
+      label: {
+        en: 'Black Staircase',
+        es: 'Escalera Negra',
+        pt: 'Escada Preta'
+      },
+      caption: {
+        en: 'Black Staircase - Before & After',
+        es: 'Escalera Negra - Antes y Despues',
+        pt: 'Escada Preta - Antes e Depois'
+      },
+      imageFit: 'contain',
+      pairs: [
+        { before: 'Blackstaircasebeforeslider.PNG', after: 'Blackstaircaseafterslider.JPG' }
+      ],
+      gallery: [
+        { src: 'Blackstaircasebeforeslider.PNG', type: 'before' },
+        { src: 'Blackstaircaseafterslider.JPG', type: 'after' },
+        { src: 'Blackstaircaseafter.JPG', type: 'after' },
+        { src: 'Blackstaircaseafter1.JPG', type: 'after' },
+        { src: 'Blackstaircaseafter2.JPG', type: 'after' },
+        { src: 'Blackstaircaseafter3.JPG', type: 'after' }
       ]
     }
   ];
