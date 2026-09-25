@@ -64,15 +64,7 @@
       why5_desc:     'We use Benjamin Moore, Sherwin-Williams, and other top-grade coatings.',
       why6_title:    'Respect for Your Space',
       why6_desc:     'We treat your home or business like our own. Clean jobsite, every day.',
-      lead_eyebrow:  'Lead-Safe Certified',
-      lead_title:    'EPA Lead-Safe Certified Firm',
-      lead_p1:       'For homes built before 1978, proper preparation matters. MM Painting & Design follows EPA lead-safe practices designed to reduce dust and protect the work area.',
-      lead_p2:       'That means careful containment, cleanup, and a safer process when we are working around your family, tenants, or customers.',
-      lead_cert:     'Certification ID: NAT-F335606-1',
-      lead_point1:   'Lead-safe work practices for older homes',
-      lead_point2:   'Careful containment, prep, and cleanup',
-      lead_point3:   'A cleaner, safer process from start to finish',
-      lead_cta:      'Ask About Lead-Safe Prep',
+
       gal_eyebrow:   'Our Work',
       gal_title:     'Finished Projects',
       gal_sub:       'Every project reflects our commitment to a flawless result.',
@@ -772,35 +764,7 @@
      - a dynamic list of options (first non-empty wins)
      The script will pick the first non-empty option automatically. */
   var BA_PROJECTS = [
-    {
-      label: {
-        en: 'Built-ins Makeover',
-        es: 'Renovacion de Muebles Empotrados',
-        pt: 'Transformacao de Marcenaria'
-      },
-      caption: {
-        en: 'Custom Built-ins - Before & After',
-        es: 'Muebles Empotrados a Medida - Antes y Despues',
-        pt: 'Marcenaria Sob Medida - Antes e Depois'
-      },
-      pairs: [
-        { before: 'befbefore1dani.jpg', after: 'befafter1dani.jpg' },
-        { before: 'befbefore2dani.jpg', after: 'befafter4dani.jpg' },
-        { before: 'befbefore3.jpg', after: 'befafter6dani.jpg' }
-      ],
-      gallery: [
-        { src: 'befbefore1dani.jpg', type: 'before' },
-        { src: 'befafter2dani.jpg', type: 'after' },
-        { src: 'befbefore2dani.jpg', type: 'before' },
-        { src: 'befafter6dani.jpg', type: 'after' },
-        { src: 'befbefore3.jpg', type: 'before' },
-        { src: 'befafter4dani.jpg', type: 'after' },
-        { src: 'befafter1dani.jpg', type: 'after' },
-        { src: 'befafter3dani.jpg', type: 'after' },
-        { src: 'befafter5dani.jpg', type: 'after' },
-        { src: 'befafter7dani.jpg', type: 'after' }
-      ]
-    },
+  
     {
       label: {
         en: 'Interior Painting',
@@ -1027,28 +991,7 @@
         { src: 'Barbaraafter3.jpg', type: 'after' }
       ]
     },
-    {
-      label: {
-        en: 'Black Staircase',
-        es: 'Escalera Negra',
-        pt: 'Escada Preta'
-      },
-      caption: {
-        en: 'Black Staircase - Before & After',
-        es: 'Escalera Negra - Antes y Despues',
-        pt: 'Escada Preta - Antes e Depois'
-      },
-      imageFit: 'contain',
-      pairs: [
-        { before: 'Blackstaircasebeforeslider.PNG', after: 'Blackstaircaseafterslider.JPG' }
-      ],
-      gallery: [
-        { src: 'Blackstaircasebeforeslider.PNG', type: 'before' },
-        { src: 'Blackstaircaseafterslider.JPG', type: 'after' },
-        { src: 'Blackstaircaseafter.JPG', type: 'after' },
-        { src: 'Blackstaircaseafter1.JPG', type: 'after' },
-        { src: 'Blackstaircaseafter2.JPG', type: 'after' },
-        { src: 'Blackstaircaseafter3.JPG', type: 'after' }
+
       ]
     }
   ];
